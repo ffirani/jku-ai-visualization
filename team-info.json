@@ -1,13 +1,33 @@
 {
-    "team_name": "Team Name",
+    "team_name": "Four horsemen of the apocalypse",
     "students": [
         {
-            "student_id": "k00000000",
+            "student_id": "k12348049",
             "first_name": "First",
             "last_name": "Last",
             "email": "first.last@mail.com",
             "github_user": "mygitusername"
         },
-        // ...add a record for each student
+        {
+            "student_id": "k52104490",
+            "first_name": "First",
+            "last_name": "Last",
+            "email": "first.last@mail.com",
+            "github_user": "mygitusername"
+        },
+        {
+            "student_id": "k12518385",
+            "first_name": "Farshid",
+            "last_name": "Famil Irani",
+            "email": "f.fa.irani@gmail.com",
+            "github_user": "ffirani"
+        },
+        {
+            "student_id": "k01635875",
+            "first_name": "First",
+            "last_name": "Last",
+            "email": "first.last@mail.com",
+            "github_user": "mygitusername"
+        }
     ]
 }

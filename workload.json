@@ -6,6 +6,20 @@
             "last_name": "Last",
             "workload": 0.25
         },
-        // ...add a record for each student
+        {
+            "first_name": "First",
+            "last_name": "Last",
+            "workload": 0.25
+        },
+        {
+            "first_name": "Farshid",
+            "last_name": "Famil Irani",
+            "workload": 0.25
+        },
+        {
+            "first_name": "First",
+            "last_name": "Last",
+            "workload": 0.25
+        }
     ]
 } 

@@ -1,9 +1,9 @@
 {
-    "team_name": "Team Name",
+    "team_name": "Four horsemen of the apocalypse",
     "students": [
         {
-            "first_name": "First",
-            "last_name": "Last",
+            "first_name": "Rostislav",
+            "last_name": "Budarin",
             "workload": 0.25
         },
         {

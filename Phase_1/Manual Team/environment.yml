@@ -1,0 +1,19 @@
+name: ai-vis
+channels:
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - ipykernel
+  - pip:
+      - transformers==5.22.1
+      - datasets==5.1.0
+      - huggingface-hub==2.4.0
+      - numpy==2.5.4
+      - matplotlib==3.11.2
+      - pillow==13.0.0
+      - pandas==3.1.0
+      - scikit-learn
+      - ipywidgets
+
+      

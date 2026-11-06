@@ -1,0 +1,6505 @@
+{
+ "workflow": "species-water-rating",
+ "run_id": "wf_e49be750-b0a",
+ "date": "2026-11-06",
+ "models": {
+  "rater A (default model, rubric)": "claude-opus-5-5",
+  "rater B (Sonnet, rubric)": "claude-sonnet-5-5",
+  "rater C (Haiku, rubric)": "claude-haiku-5-5",
+  "rater D (default model, habitat-first)": "claude-opus-5-5",
+  "adjudicator (7 species)": "claude-opus-5-5",
+  "consistency critic": "claude-opus-5-5"
+ },
+ "result": {
+  "rubric": "Rate how strongly each bird species is tied to water habitats (open water, shores, wetlands) on a 0-3 scale. Think about where the species typically feeds, nests and spends its time across its normal range, not about any single photo.\n\n0 = no water tie. Typical habitat is forest, woodland, grassland, desert, scrub, mountains or towns; water plays no special role. (Example not in the list: Wild Turkey.)\n1 = weak tie. Regularly seen near water or in damp habitats, or sometimes forages over water, but does not depend on it. (Example not in the list: American Robin.)\n2 = strong tie. Mostly lives in wetlands, marshes, swamps, mangroves, riverbanks or shorelines, but feeds mainly on land, in vegetation or in the air rather than in the water. (Example not in the list: Swamp Sparrow.)\n3 = aquatic. Gets its food from the water (swimming, diving, plunge-diving, wading for aquatic prey, or snatching food from the water surface) and/or spends most of its life on open water or at sea. (Examples not in the list: Common Loon, Great Blue Heron.)\n\nRate each species independently, based on its ecology only. The reason must be one short line (at most about 15 words) naming the habitat or behavior that decides the rating. Confidence is how sure you are of the rating (low / medium / high).",
+  "raters": [
+   {
+    "key": "A",
+    "desc": "default model, rubric",
+    "ratings": [
+     {
+      "species": "Black_footed_Albatross",
+      "rating": 3,
+      "reason": "Pelagic seabird feeding on squid and fish from the ocean surface",
+      "confidence": "high"
+     },
+     {
+      "species": "Laysan_Albatross",
+      "rating": 3,
+      "reason": "Pelagic seabird spending most of life at sea, feeds from surface",
+      "confidence": "high"
+     },
+     {
+      "species": "Sooty_Albatross",
+      "rating": 3,
+      "reason": "Southern Ocean pelagic seabird feeding at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Groove_billed_Ani",
+      "rating": 0,
+      "reason": "Open brushy scrub and pastures; insects caught on land",
+      "confidence": "medium"
+     },
+     {
+      "species": "Crested_Auklet",
+      "rating": 3,
+      "reason": "Diving seabird feeding on marine plankton",
+      "confidence": "high"
+     },
+     {
+      "species": "Least_Auklet",
+      "rating": 3,
+      "reason": "Diving seabird feeding on zooplankton at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Parakeet_Auklet",
+      "rating": 3,
+      "reason": "Diving alcid feeding on marine invertebrates at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Rhinoceros_Auklet",
+      "rating": 3,
+      "reason": "Diving seabird catching fish at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Brewer_Blackbird",
+      "rating": 1,
+      "reason": "Open fields and towns, often forages near water edges",
+      "confidence": "medium"
+     },
+     {
+      "species": "Red_winged_Blackbird",
+      "rating": 2,
+      "reason": "Nests in marshes but feeds on seeds and insects on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Rusty_Blackbird",
+      "rating": 2,
+      "reason": "Wooded swamps and bogs; forages on wet ground and shallow edges",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_headed_Blackbird",
+      "rating": 2,
+      "reason": "Nests over water in marshes, feeds largely in fields",
+      "confidence": "high"
+     },
+     {
+      "species": "Bobolink",
+      "rating": 0,
+      "reason": "Grassland and hayfield breeder",
+      "confidence": "high"
+     },
+     {
+      "species": "Indigo_Bunting",
+      "rating": 0,
+      "reason": "Brushy edges and woodland clearings",
+      "confidence": "high"
+     },
+     {
+      "species": "Lazuli_Bunting",
+      "rating": 0,
+      "reason": "Brushy hillsides and shrubby areas",
+      "confidence": "medium"
+     },
+     {
+      "species": "Painted_Bunting",
+      "rating": 0,
+      "reason": "Thickets, brushy edges and scrub",
+      "confidence": "high"
+     },
+     {
+      "species": "Cardinal",
+      "rating": 0,
+      "reason": "Woodland edges, thickets and gardens",
+      "confidence": "high"
+     },
+     {
+      "species": "Spotted_Catbird",
+      "rating": 0,
+      "reason": "Tropical rainforest fruit-eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Gray_Catbird",
+      "rating": 0,
+      "reason": "Dense shrubby thickets and edges",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_breasted_Chat",
+      "rating": 0,
+      "reason": "Dense thickets and shrubby clearings",
+      "confidence": "medium"
+     },
+     {
+      "species": "Eastern_Towhee",
+      "rating": 0,
+      "reason": "Forest understory and thickets, forages in leaf litter",
+      "confidence": "high"
+     },
+     {
+      "species": "Chuck_will_Widow",
+      "rating": 0,
+      "reason": "Nightjar of pine and oak woodlands",
+      "confidence": "high"
+     },
+     {
+      "species": "Brandt_Cormorant",
+      "rating": 3,
+      "reason": "Marine diving cormorant catching fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_faced_Cormorant",
+      "rating": 3,
+      "reason": "Marine diving cormorant of North Pacific coasts",
+      "confidence": "high"
+     },
+     {
+      "species": "Pelagic_Cormorant",
+      "rating": 3,
+      "reason": "Coastal marine diver feeding on fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Bronzed_Cowbird",
+      "rating": 0,
+      "reason": "Open country, fields and towns",
+      "confidence": "high"
+     },
+     {
+      "species": "Shiny_Cowbird",
+      "rating": 0,
+      "reason": "Open country and agricultural land",
+      "confidence": "high"
+     },
+     {
+      "species": "Brown_Creeper",
+      "rating": 0,
+      "reason": "Forest bird foraging on tree bark",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Crow",
+      "rating": 0,
+      "reason": "Generalist of fields, woods and towns",
+      "confidence": "medium"
+     },
+     {
+      "species": "Fish_Crow",
+      "rating": 2,
+      "reason": "Coastal, tidewater and riverine habitats; scavenges along shores",
+      "confidence": "medium"
+     },
+     {
+      "species": "Black_billed_Cuckoo",
+      "rating": 0,
+      "reason": "Woodlands and thickets, eats caterpillars",
+      "confidence": "high"
+     },
+     {
+      "species": "Mangrove_Cuckoo",
+      "rating": 2,
+      "reason": "Lives in mangroves, feeds on insects in foliage",
+      "confidence": "high"
+     },
+     {
+      "species": "Yellow_billed_Cuckoo",
+      "rating": 0,
+      "reason": "Deciduous woodland; riparian in West but feeds in foliage",
+      "confidence": "medium"
+     },
+     {
+      "species": "Gray_crowned_Rosy_Finch",
+      "rating": 0,
+      "reason": "Alpine and tundra, forages on snowfields and rocks",
+      "confidence": "high"
+     },
+     {
+      "species": "Purple_Finch",
+      "rating": 0,
+      "reason": "Coniferous and mixed forests",
+      "confidence": "high"
+     },
+     {
+      "species": "Northern_Flicker",
+      "rating": 0,
+      "reason": "Open woodlands, feeds on ground ants",
+      "confidence": "high"
+     },
+     {
+      "species": "Acadian_Flycatcher",
+      "rating": 1,
+      "reason": "Moist forests, often along streams and ravines",
+      "confidence": "medium"
+     },
+     {
+      "species": "Great_Crested_Flycatcher",
+      "rating": 0,
+      "reason": "Deciduous woodland canopy",
+      "confidence": "high"
+     },
+     {
+      "species": "Least_Flycatcher",
+      "rating": 0,
+      "reason": "Deciduous and mixed woodlands",
+      "confidence": "high"
+     },
+     {
+      "species": "Olive_sided_Flycatcher",
+      "rating": 1,
+      "reason": "Conifer forest edges, often bogs and beaver ponds",
+      "confidence": "medium"
+     },
+     {
+      "species": "Scissor_tailed_Flycatcher",
+      "rating": 0,
+      "reason": "Open grassland and savanna with scattered trees",
+      "confidence": "high"
+     },
+     {
+      "species": "Vermilion_Flycatcher",
+      "rating": 1,
+      "reason": "Arid open areas, usually near water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_bellied_Flycatcher",
+      "rating": 1,
+      "reason": "Boreal bogs and wet coniferous forest",
+      "confidence": "medium"
+     },
+     {
+      "species": "Frigatebird",
+      "rating": 3,
+      "reason": "Oceanic seabird snatching fish from sea surface",
+      "confidence": "high"
+     },
+     {
+      "species": "Northern_Fulmar",
+      "rating": 3,
+      "reason": "Pelagic seabird feeding at ocean surface",
+      "confidence": "high"
+     },
+     {
+      "species": "Gadwall",
+      "rating": 3,
+      "reason": "Dabbling duck feeding on aquatic plants",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Goldfinch",
+      "rating": 0,
+      "reason": "Weedy fields and open areas, seed eater",
+      "confidence": "high"
+     },
+     {
+      "species": "European_Goldfinch",
+      "rating": 0,
+      "reason": "Open woodland, fields and gardens",
+      "confidence": "high"
+     },
+     {
+      "species": "Boat_tailed_Grackle",
+      "rating": 2,
+      "reason": "Coastal marshes; forages on ground and shallow edges",
+      "confidence": "medium"
+     },
+     {
+      "species": "Eared_Grebe",
+      "rating": 3,
+      "reason": "Diving waterbird of lakes and saline waters",
+      "confidence": "high"
+     },
+     {
+      "species": "Horned_Grebe",
+      "rating": 3,
+      "reason": "Diving grebe of ponds and coastal waters",
+      "confidence": "high"
+     },
+     {
+      "species": "Pied_billed_Grebe",
+      "rating": 3,
+      "reason": "Diving grebe of freshwater marshes and ponds",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Grebe",
+      "rating": 3,
+      "reason": "Diving fish-eater on lakes and coastal bays",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_Grosbeak",
+      "rating": 0,
+      "reason": "Brushy fields and overgrown edges",
+      "confidence": "high"
+     },
+     {
+      "species": "Evening_Grosbeak",
+      "rating": 0,
+      "reason": "Coniferous and mixed forests",
+      "confidence": "high"
+     },
+     {
+      "species": "Pine_Grosbeak",
+      "rating": 0,
+      "reason": "Boreal coniferous forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Rose_breasted_Grosbeak",
+      "rating": 0,
+      "reason": "Deciduous woodland and edges",
+      "confidence": "high"
+     },
+     {
+      "species": "Pigeon_Guillemot",
+      "rating": 3,
+      "reason": "Coastal diving alcid feeding on fish",
+      "confidence": "high"
+     },
+     {
+      "species": "California_Gull",
+      "rating": 3,
+      "reason": "Gull of inland lakes and coasts, feeds from water",
+      "confidence": "high"
+     },
+     {
+      "species": "Glaucous_winged_Gull",
+      "rating": 3,
+      "reason": "Coastal marine gull feeding at sea and shore",
+      "confidence": "high"
+     },
+     {
+      "species": "Heermann_Gull",
+      "rating": 3,
+      "reason": "Coastal gull feeding on fish at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Herring_Gull",
+      "rating": 3,
+      "reason": "Coastal and lake gull feeding from water and shores",
+      "confidence": "high"
+     },
+     {
+      "species": "Ivory_Gull",
+      "rating": 3,
+      "reason": "High Arctic gull of pack ice and open sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Ring_billed_Gull",
+      "rating": 3,
+      "reason": "Gull of lakes and coasts, though often forages on land",
+      "confidence": "medium"
+     },
+     {
+      "species": "Slaty_backed_Gull",
+      "rating": 3,
+      "reason": "Coastal marine gull of the North Pacific",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Gull",
+      "rating": 3,
+      "reason": "Strictly coastal marine gull",
+      "confidence": "high"
+     },
+     {
+      "species": "Anna_Hummingbird",
+      "rating": 0,
+      "reason": "Chaparral, gardens and open woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Ruby_throated_Hummingbird",
+      "rating": 0,
+      "reason": "Woodland edges and gardens, nectar feeder",
+      "confidence": "high"
+     },
+     {
+      "species": "Rufous_Hummingbird",
+      "rating": 0,
+      "reason": "Forest edges and mountain meadows",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_Violetear",
+      "rating": 0,
+      "reason": "Montane forest and edges, nectar feeder",
+      "confidence": "high"
+     },
+     {
+      "species": "Long_tailed_Jaeger",
+      "rating": 3,
+      "reason": "Pelagic outside breeding season; breeds on tundra",
+      "confidence": "medium"
+     },
+     {
+      "species": "Pomarine_Jaeger",
+      "rating": 3,
+      "reason": "Pelagic seabird, kleptoparasite at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_Jay",
+      "rating": 0,
+      "reason": "Oak and mixed forests, towns",
+      "confidence": "high"
+     },
+     {
+      "species": "Florida_Jay",
+      "rating": 0,
+      "reason": "Dry oak scrub specialist",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_Jay",
+      "rating": 0,
+      "reason": "Thorn scrub and tropical woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Dark_eyed_Junco",
+      "rating": 0,
+      "reason": "Coniferous forest and open woodland, ground forager",
+      "confidence": "high"
+     },
+     {
+      "species": "Tropical_Kingbird",
+      "rating": 1,
+      "reason": "Open areas and edges, often near water",
+      "confidence": "low"
+     },
+     {
+      "species": "Gray_Kingbird",
+      "rating": 2,
+      "reason": "Coastal areas and mangroves, aerial insect catcher",
+      "confidence": "low"
+     },
+     {
+      "species": "Belted_Kingfisher",
+      "rating": 3,
+      "reason": "Plunge-dives for fish in streams and lakes",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_Kingfisher",
+      "rating": 3,
+      "reason": "Plunge-dives for small fish in streams",
+      "confidence": "high"
+     },
+     {
+      "species": "Pied_Kingfisher",
+      "rating": 3,
+      "reason": "Hovers and plunge-dives for fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Ringed_Kingfisher",
+      "rating": 3,
+      "reason": "Plunge-diving fish-eater of rivers and lakes",
+      "confidence": "high"
+     },
+     {
+      "species": "White_breasted_Kingfisher",
+      "rating": 1,
+      "reason": "Often far from water, eats insects and lizards, some fish",
+      "confidence": "medium"
+     },
+     {
+      "species": "Red_legged_Kittiwake",
+      "rating": 3,
+      "reason": "Pelagic gull feeding at the sea surface",
+      "confidence": "high"
+     },
+     {
+      "species": "Horned_Lark",
+      "rating": 0,
+      "reason": "Barren open ground, fields and tundra",
+      "confidence": "high"
+     },
+     {
+      "species": "Pacific_Loon",
+      "rating": 3,
+      "reason": "Diving fish-eater on lakes and at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Mallard",
+      "rating": 3,
+      "reason": "Dabbling duck of ponds and wetlands",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Meadowlark",
+      "rating": 0,
+      "reason": "Grasslands and open fields",
+      "confidence": "high"
+     },
+     {
+      "species": "Hooded_Merganser",
+      "rating": 3,
+      "reason": "Diving duck catching fish and invertebrates",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_breasted_Merganser",
+      "rating": 3,
+      "reason": "Diving fish-eating duck of coastal waters",
+      "confidence": "high"
+     },
+     {
+      "species": "Mockingbird",
+      "rating": 0,
+      "reason": "Open areas, towns and scrub",
+      "confidence": "high"
+     },
+     {
+      "species": "Nighthawk",
+      "rating": 0,
+      "reason": "Aerial insectivore of open country and towns",
+      "confidence": "medium"
+     },
+     {
+      "species": "Clark_Nutcracker",
+      "rating": 0,
+      "reason": "Montane conifer forest, pine seed cacher",
+      "confidence": "high"
+     },
+     {
+      "species": "White_breasted_Nuthatch",
+      "rating": 0,
+      "reason": "Deciduous woodland, forages on bark",
+      "confidence": "high"
+     },
+     {
+      "species": "Baltimore_Oriole",
+      "rating": 0,
+      "reason": "Open deciduous woodland and shade trees",
+      "confidence": "medium"
+     },
+     {
+      "species": "Hooded_Oriole",
+      "rating": 0,
+      "reason": "Palms, riparian trees and towns in arid regions",
+      "confidence": "medium"
+     },
+     {
+      "species": "Orchard_Oriole",
+      "rating": 0,
+      "reason": "Open woodland and orchards",
+      "confidence": "high"
+     },
+     {
+      "species": "Scott_Oriole",
+      "rating": 0,
+      "reason": "Desert yucca and pinyon-juniper scrub",
+      "confidence": "high"
+     },
+     {
+      "species": "Ovenbird",
+      "rating": 0,
+      "reason": "Forest floor of deciduous woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Brown_Pelican",
+      "rating": 3,
+      "reason": "Plunge-dives for fish in coastal waters",
+      "confidence": "high"
+     },
+     {
+      "species": "White_Pelican",
+      "rating": 3,
+      "reason": "Swims and scoops fish on lakes and wetlands",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Wood_Pewee",
+      "rating": 0,
+      "reason": "Open woodland flycatcher",
+      "confidence": "high"
+     },
+     {
+      "species": "Sayornis",
+      "rating": 1,
+      "reason": "Phoebes usually near water, nest on streamside structures",
+      "confidence": "medium"
+     },
+     {
+      "species": "American_Pipit",
+      "rating": 1,
+      "reason": "Tundra breeder; winters on shores, mudflats and fields",
+      "confidence": "medium"
+     },
+     {
+      "species": "Whip_poor_Will",
+      "rating": 0,
+      "reason": "Nightjar of dry deciduous forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Horned_Puffin",
+      "rating": 3,
+      "reason": "Diving seabird catching fish at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Common_Raven",
+      "rating": 0,
+      "reason": "Mountains, deserts, forests, generalist",
+      "confidence": "high"
+     },
+     {
+      "species": "White_necked_Raven",
+      "rating": 0,
+      "reason": "African mountains and rocky open country",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Redstart",
+      "rating": 0,
+      "reason": "Deciduous forest foliage gleaner",
+      "confidence": "high"
+     },
+     {
+      "species": "Geococcyx",
+      "rating": 0,
+      "reason": "Roadrunners of desert and arid scrub",
+      "confidence": "high"
+     },
+     {
+      "species": "Loggerhead_Shrike",
+      "rating": 0,
+      "reason": "Open grassland and scrub with perches",
+      "confidence": "high"
+     },
+     {
+      "species": "Great_Grey_Shrike",
+      "rating": 0,
+      "reason": "Open country with scattered trees and scrub",
+      "confidence": "high"
+     },
+     {
+      "species": "Baird_Sparrow",
+      "rating": 0,
+      "reason": "Native mixed-grass prairie",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_throated_Sparrow",
+      "rating": 0,
+      "reason": "Desert scrub",
+      "confidence": "high"
+     },
+     {
+      "species": "Brewer_Sparrow",
+      "rating": 0,
+      "reason": "Sagebrush shrubland",
+      "confidence": "high"
+     },
+     {
+      "species": "Chipping_Sparrow",
+      "rating": 0,
+      "reason": "Open woodland, lawns and parks",
+      "confidence": "high"
+     },
+     {
+      "species": "Clay_colored_Sparrow",
+      "rating": 0,
+      "reason": "Shrubby prairie and brushy fields",
+      "confidence": "high"
+     },
+     {
+      "species": "House_Sparrow",
+      "rating": 0,
+      "reason": "Towns and farmland",
+      "confidence": "high"
+     },
+     {
+      "species": "Field_Sparrow",
+      "rating": 0,
+      "reason": "Old fields and brushy grassland",
+      "confidence": "high"
+     },
+     {
+      "species": "Fox_Sparrow",
+      "rating": 0,
+      "reason": "Dense thickets and forest undergrowth",
+      "confidence": "high"
+     },
+     {
+      "species": "Grasshopper_Sparrow",
+      "rating": 0,
+      "reason": "Dry grasslands",
+      "confidence": "high"
+     },
+     {
+      "species": "Harris_Sparrow",
+      "rating": 0,
+      "reason": "Taiga-tundra edge; winters in brushy fields",
+      "confidence": "high"
+     },
+     {
+      "species": "Henslow_Sparrow",
+      "rating": 1,
+      "reason": "Tall, often damp grassy meadows",
+      "confidence": "medium"
+     },
+     {
+      "species": "Le_Conte_Sparrow",
+      "rating": 2,
+      "reason": "Wet sedge meadows and marsh edges",
+      "confidence": "low"
+     },
+     {
+      "species": "Lincoln_Sparrow",
+      "rating": 1,
+      "reason": "Wet shrubby bogs and willow thickets",
+      "confidence": "medium"
+     },
+     {
+      "species": "Nelson_Sharp_tailed_Sparrow",
+      "rating": 2,
+      "reason": "Salt and freshwater marshes, feeds in marsh vegetation",
+      "confidence": "high"
+     },
+     {
+      "species": "Savannah_Sparrow",
+      "rating": 0,
+      "reason": "Open grasslands and fields, some salt-marsh forms",
+      "confidence": "medium"
+     },
+     {
+      "species": "Seaside_Sparrow",
+      "rating": 2,
+      "reason": "Salt marsh specialist foraging on mud and in grasses",
+      "confidence": "medium"
+     },
+     {
+      "species": "Song_Sparrow",
+      "rating": 1,
+      "reason": "Often in wet thickets and marsh edges",
+      "confidence": "medium"
+     },
+     {
+      "species": "Tree_Sparrow",
+      "rating": 0,
+      "reason": "Tundra scrub; winters in weedy fields",
+      "confidence": "high"
+     },
+     {
+      "species": "Vesper_Sparrow",
+      "rating": 0,
+      "reason": "Dry open fields and grasslands",
+      "confidence": "high"
+     },
+     {
+      "species": "White_crowned_Sparrow",
+      "rating": 0,
+      "reason": "Shrubby open habitats",
+      "confidence": "high"
+     },
+     {
+      "species": "White_throated_Sparrow",
+      "rating": 0,
+      "reason": "Forest undergrowth and thickets",
+      "confidence": "high"
+     },
+     {
+      "species": "Cape_Glossy_Starling",
+      "rating": 0,
+      "reason": "African savanna and open woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Bank_Swallow",
+      "rating": 2,
+      "reason": "Nests in riverbanks, forages aerially over water",
+      "confidence": "high"
+     },
+     {
+      "species": "Barn_Swallow",
+      "rating": 1,
+      "reason": "Open country, frequently hawks insects over water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Cliff_Swallow",
+      "rating": 1,
+      "reason": "Open areas near water, needs mud for nests",
+      "confidence": "medium"
+     },
+     {
+      "species": "Tree_Swallow",
+      "rating": 2,
+      "reason": "Nests near wetlands and ponds, forages aerially over water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Scarlet_Tanager",
+      "rating": 0,
+      "reason": "Deciduous forest canopy",
+      "confidence": "high"
+     },
+     {
+      "species": "Summer_Tanager",
+      "rating": 0,
+      "reason": "Open woodland, eats bees and wasps",
+      "confidence": "high"
+     },
+     {
+      "species": "Artic_Tern",
+      "rating": 3,
+      "reason": "Plunge-diving seabird, mostly at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_Tern",
+      "rating": 3,
+      "reason": "Marsh tern dipping prey from the water surface",
+      "confidence": "high"
+     },
+     {
+      "species": "Caspian_Tern",
+      "rating": 3,
+      "reason": "Plunge-dives for fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Common_Tern",
+      "rating": 3,
+      "reason": "Plunge-dives for small fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Elegant_Tern",
+      "rating": 3,
+      "reason": "Coastal tern plunge-diving for fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Forsters_Tern",
+      "rating": 3,
+      "reason": "Marsh tern plunge-diving for fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Least_Tern",
+      "rating": 3,
+      "reason": "Plunge-dives for small fish near shores",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_tailed_Towhee",
+      "rating": 0,
+      "reason": "Montane shrubland and sagebrush",
+      "confidence": "high"
+     },
+     {
+      "species": "Brown_Thrasher",
+      "rating": 0,
+      "reason": "Thickets and brushy edges",
+      "confidence": "high"
+     },
+     {
+      "species": "Sage_Thrasher",
+      "rating": 0,
+      "reason": "Sagebrush steppe",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_capped_Vireo",
+      "rating": 0,
+      "reason": "Shrubby oak scrub",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_headed_Vireo",
+      "rating": 0,
+      "reason": "Mixed and coniferous forests",
+      "confidence": "high"
+     },
+     {
+      "species": "Philadelphia_Vireo",
+      "rating": 0,
+      "reason": "Deciduous second-growth forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_eyed_Vireo",
+      "rating": 0,
+      "reason": "Deciduous forest canopy",
+      "confidence": "high"
+     },
+     {
+      "species": "Warbling_Vireo",
+      "rating": 1,
+      "reason": "Deciduous trees, often riparian along streams",
+      "confidence": "low"
+     },
+     {
+      "species": "White_eyed_Vireo",
+      "rating": 0,
+      "reason": "Dense shrubby thickets",
+      "confidence": "high"
+     },
+     {
+      "species": "Yellow_throated_Vireo",
+      "rating": 0,
+      "reason": "Open deciduous woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Bay_breasted_Warbler",
+      "rating": 0,
+      "reason": "Boreal spruce forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_and_white_Warbler",
+      "rating": 0,
+      "reason": "Forests, creeps along bark",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_throated_Blue_Warbler",
+      "rating": 0,
+      "reason": "Deciduous forest understory",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_winged_Warbler",
+      "rating": 0,
+      "reason": "Shrubby old fields and forest edges",
+      "confidence": "high"
+     },
+     {
+      "species": "Canada_Warbler",
+      "rating": 1,
+      "reason": "Moist forests with dense, often swampy understory",
+      "confidence": "medium"
+     },
+     {
+      "species": "Cape_May_Warbler",
+      "rating": 0,
+      "reason": "Boreal spruce forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Cerulean_Warbler",
+      "rating": 0,
+      "reason": "Mature deciduous forest canopy",
+      "confidence": "medium"
+     },
+     {
+      "species": "Chestnut_sided_Warbler",
+      "rating": 0,
+      "reason": "Second-growth shrubby forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Golden_winged_Warbler",
+      "rating": 0,
+      "reason": "Shrubby early-successional habitat",
+      "confidence": "medium"
+     },
+     {
+      "species": "Hooded_Warbler",
+      "rating": 0,
+      "reason": "Deciduous forest understory",
+      "confidence": "high"
+     },
+     {
+      "species": "Kentucky_Warbler",
+      "rating": 0,
+      "reason": "Moist deciduous forest floor",
+      "confidence": "medium"
+     },
+     {
+      "species": "Magnolia_Warbler",
+      "rating": 0,
+      "reason": "Young coniferous forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Mourning_Warbler",
+      "rating": 0,
+      "reason": "Dense second-growth thickets",
+      "confidence": "high"
+     },
+     {
+      "species": "Myrtle_Warbler",
+      "rating": 0,
+      "reason": "Coniferous forest; winters in varied habitats",
+      "confidence": "medium"
+     },
+     {
+      "species": "Nashville_Warbler",
+      "rating": 0,
+      "reason": "Second-growth woodland and forest edges",
+      "confidence": "high"
+     },
+     {
+      "species": "Orange_crowned_Warbler",
+      "rating": 0,
+      "reason": "Shrubby woodland and thickets",
+      "confidence": "high"
+     },
+     {
+      "species": "Palm_Warbler",
+      "rating": 1,
+      "reason": "Breeds in boreal bogs; winters in open areas",
+      "confidence": "medium"
+     },
+     {
+      "species": "Pine_Warbler",
+      "rating": 0,
+      "reason": "Pine forests",
+      "confidence": "high"
+     },
+     {
+      "species": "Prairie_Warbler",
+      "rating": 0,
+      "reason": "Scrubby fields and young pine stands",
+      "confidence": "high"
+     },
+     {
+      "species": "Prothonotary_Warbler",
+      "rating": 2,
+      "reason": "Swamps and flooded forests, gleans insects in vegetation",
+      "confidence": "high"
+     },
+     {
+      "species": "Swainson_Warbler",
+      "rating": 2,
+      "reason": "Bottomland swamp forest and canebrakes, ground forager",
+      "confidence": "low"
+     },
+     {
+      "species": "Tennessee_Warbler",
+      "rating": 0,
+      "reason": "Boreal forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Wilson_Warbler",
+      "rating": 1,
+      "reason": "Wet willow thickets and streamside shrubs",
+      "confidence": "medium"
+     },
+     {
+      "species": "Worm_eating_Warbler",
+      "rating": 0,
+      "reason": "Deciduous forest hillsides",
+      "confidence": "high"
+     },
+     {
+      "species": "Yellow_Warbler",
+      "rating": 1,
+      "reason": "Shrubs and willows often near water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Northern_Waterthrush",
+      "rating": 2,
+      "reason": "Swamps and bogs, forages at water's edge on wet ground",
+      "confidence": "low"
+     },
+     {
+      "species": "Louisiana_Waterthrush",
+      "rating": 3,
+      "reason": "Wades along streams catching aquatic invertebrates",
+      "confidence": "medium"
+     },
+     {
+      "species": "Bohemian_Waxwing",
+      "rating": 0,
+      "reason": "Boreal forest, fruit eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Cedar_Waxwing",
+      "rating": 1,
+      "reason": "Open woodland, often flycatches over streams",
+      "confidence": "low"
+     },
+     {
+      "species": "American_Three_toed_Woodpecker",
+      "rating": 0,
+      "reason": "Boreal coniferous forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Pileated_Woodpecker",
+      "rating": 0,
+      "reason": "Mature forests",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_bellied_Woodpecker",
+      "rating": 0,
+      "reason": "Deciduous woodlands",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_cockaded_Woodpecker",
+      "rating": 0,
+      "reason": "Mature longleaf pine forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_headed_Woodpecker",
+      "rating": 0,
+      "reason": "Open woodland and savanna",
+      "confidence": "high"
+     },
+     {
+      "species": "Downy_Woodpecker",
+      "rating": 0,
+      "reason": "Woodlands, parks and yards",
+      "confidence": "high"
+     },
+     {
+      "species": "Bewick_Wren",
+      "rating": 0,
+      "reason": "Brushy scrub and open woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Cactus_Wren",
+      "rating": 0,
+      "reason": "Desert cactus scrub",
+      "confidence": "high"
+     },
+     {
+      "species": "Carolina_Wren",
+      "rating": 0,
+      "reason": "Woodland undergrowth and gardens",
+      "confidence": "high"
+     },
+     {
+      "species": "House_Wren",
+      "rating": 0,
+      "reason": "Open woodland, edges and yards",
+      "confidence": "high"
+     },
+     {
+      "species": "Marsh_Wren",
+      "rating": 2,
+      "reason": "Lives in cattail and reed marshes, gleans insects",
+      "confidence": "high"
+     },
+     {
+      "species": "Rock_Wren",
+      "rating": 0,
+      "reason": "Arid rocky slopes",
+      "confidence": "high"
+     },
+     {
+      "species": "Winter_Wren",
+      "rating": 1,
+      "reason": "Moist forest understory, often near streams",
+      "confidence": "low"
+     },
+     {
+      "species": "Common_Yellowthroat",
+      "rating": 2,
+      "reason": "Mostly marshes and wet thickets, gleans insects in vegetation",
+      "confidence": "low"
+     }
+    ]
+   },
+   {
+    "key": "B",
+    "desc": "Sonnet, rubric",
+    "ratings": [
+     {
+      "species": "Black_footed_Albatross",
+      "rating": 3,
+      "reason": "Pelagic seabird feeding on ocean surface",
+      "confidence": "high"
+     },
+     {
+      "species": "Laysan_Albatross",
+      "rating": 3,
+      "reason": "Pelagic seabird feeding at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Sooty_Albatross",
+      "rating": 3,
+      "reason": "Southern ocean pelagic seabird",
+      "confidence": "high"
+     },
+     {
+      "species": "Groove_billed_Ani",
+      "rating": 0,
+      "reason": "Open scrub and pasture insect eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Crested_Auklet",
+      "rating": 3,
+      "reason": "Diving seabird feeding on zooplankton at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Least_Auklet",
+      "rating": 3,
+      "reason": "Small diving seabird, plankton feeder at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Parakeet_Auklet",
+      "rating": 3,
+      "reason": "Diving seabird living at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Rhinoceros_Auklet",
+      "rating": 3,
+      "reason": "Diving seabird catching fish at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Brewer_Blackbird",
+      "rating": 1,
+      "reason": "Open habitats, often near water and towns",
+      "confidence": "medium"
+     },
+     {
+      "species": "Red_winged_Blackbird",
+      "rating": 2,
+      "reason": "Nests in marsh vegetation, feeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Rusty_Blackbird",
+      "rating": 2,
+      "reason": "Wet woodlands, swamps and shores, forages in shallows",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_headed_Blackbird",
+      "rating": 2,
+      "reason": "Nests in marshes, feeds on insects",
+      "confidence": "high"
+     },
+     {
+      "species": "Bobolink",
+      "rating": 0,
+      "reason": "Grassland and hayfield breeder",
+      "confidence": "high"
+     },
+     {
+      "species": "Indigo_Bunting",
+      "rating": 0,
+      "reason": "Brushy edges and woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Lazuli_Bunting",
+      "rating": 0,
+      "reason": "Brushy slopes and thickets",
+      "confidence": "high"
+     },
+     {
+      "species": "Painted_Bunting",
+      "rating": 0,
+      "reason": "Scrub and thickets",
+      "confidence": "high"
+     },
+     {
+      "species": "Cardinal",
+      "rating": 0,
+      "reason": "Woodland edge, gardens, thickets",
+      "confidence": "high"
+     },
+     {
+      "species": "Spotted_Catbird",
+      "rating": 0,
+      "reason": "Rainforest fruit eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Gray_Catbird",
+      "rating": 0,
+      "reason": "Dense thickets and shrubs",
+      "confidence": "high"
+     },
+     {
+      "species": "Yellow_breasted_Chat",
+      "rating": 0,
+      "reason": "Dense scrub thickets, often streamside but not dependent",
+      "confidence": "medium"
+     },
+     {
+      "species": "Eastern_Towhee",
+      "rating": 0,
+      "reason": "Scrub and forest understory",
+      "confidence": "high"
+     },
+     {
+      "species": "Chuck_will_Widow",
+      "rating": 0,
+      "reason": "Nocturnal woodland nightjar",
+      "confidence": "high"
+     },
+     {
+      "species": "Brandt_Cormorant",
+      "rating": 3,
+      "reason": "Marine diving fish eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_faced_Cormorant",
+      "rating": 3,
+      "reason": "Marine diving fish eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Pelagic_Cormorant",
+      "rating": 3,
+      "reason": "Marine diving fish eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Bronzed_Cowbird",
+      "rating": 0,
+      "reason": "Open country and farmland",
+      "confidence": "high"
+     },
+     {
+      "species": "Shiny_Cowbird",
+      "rating": 0,
+      "reason": "Open habitats, farmland, towns",
+      "confidence": "high"
+     },
+     {
+      "species": "Brown_Creeper",
+      "rating": 0,
+      "reason": "Forest tree trunk forager",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Crow",
+      "rating": 0,
+      "reason": "Generalist of fields, woods, towns",
+      "confidence": "high"
+     },
+     {
+      "species": "Fish_Crow",
+      "rating": 1,
+      "reason": "Often along coasts and rivers, scavenges",
+      "confidence": "medium"
+     },
+     {
+      "species": "Black_billed_Cuckoo",
+      "rating": 0,
+      "reason": "Deciduous woodland caterpillar eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Mangrove_Cuckoo",
+      "rating": 1,
+      "reason": "Mangrove and coastal thickets, forages in foliage",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_billed_Cuckoo",
+      "rating": 0,
+      "reason": "Woodland, riparian groves but not water-dependent",
+      "confidence": "medium"
+     },
+     {
+      "species": "Gray_crowned_Rosy_Finch",
+      "rating": 0,
+      "reason": "Alpine rocky tundra and snowfields",
+      "confidence": "high"
+     },
+     {
+      "species": "Purple_Finch",
+      "rating": 0,
+      "reason": "Coniferous and mixed forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Northern_Flicker",
+      "rating": 0,
+      "reason": "Woodland edges, ground-feeding ants",
+      "confidence": "high"
+     },
+     {
+      "species": "Acadian_Flycatcher",
+      "rating": 1,
+      "reason": "Shady woods, often near streams",
+      "confidence": "medium"
+     },
+     {
+      "species": "Great_Crested_Flycatcher",
+      "rating": 0,
+      "reason": "Woodland canopy",
+      "confidence": "high"
+     },
+     {
+      "species": "Least_Flycatcher",
+      "rating": 0,
+      "reason": "Deciduous woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Olive_sided_Flycatcher",
+      "rating": 0,
+      "reason": "Conifer forest edges, burns, bogs",
+      "confidence": "medium"
+     },
+     {
+      "species": "Scissor_tailed_Flycatcher",
+      "rating": 0,
+      "reason": "Open grassland with scattered trees",
+      "confidence": "high"
+     },
+     {
+      "species": "Vermilion_Flycatcher",
+      "rating": 1,
+      "reason": "Open country often near water in arid areas",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_bellied_Flycatcher",
+      "rating": 1,
+      "reason": "Boreal bogs and wet conifer forest",
+      "confidence": "medium"
+     },
+     {
+      "species": "Frigatebird",
+      "rating": 3,
+      "reason": "Oceanic seabird snatching food from the surface",
+      "confidence": "high"
+     },
+     {
+      "species": "Northern_Fulmar",
+      "rating": 3,
+      "reason": "Pelagic seabird feeding at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Gadwall",
+      "rating": 3,
+      "reason": "Dabbling duck feeding on aquatic plants",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Goldfinch",
+      "rating": 0,
+      "reason": "Weedy fields and seed feeders",
+      "confidence": "high"
+     },
+     {
+      "species": "European_Goldfinch",
+      "rating": 0,
+      "reason": "Farmland, gardens, seed eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Boat_tailed_Grackle",
+      "rating": 2,
+      "reason": "Coastal marshes and shores, forages on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Eared_Grebe",
+      "rating": 3,
+      "reason": "Diving grebe living on water",
+      "confidence": "high"
+     },
+     {
+      "species": "Horned_Grebe",
+      "rating": 3,
+      "reason": "Diving grebe living on water",
+      "confidence": "high"
+     },
+     {
+      "species": "Pied_billed_Grebe",
+      "rating": 3,
+      "reason": "Diving grebe living on water",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Grebe",
+      "rating": 3,
+      "reason": "Diving fish-eating grebe",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_Grosbeak",
+      "rating": 0,
+      "reason": "Brushy fields and edges",
+      "confidence": "high"
+     },
+     {
+      "species": "Evening_Grosbeak",
+      "rating": 0,
+      "reason": "Coniferous forest seed eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Pine_Grosbeak",
+      "rating": 0,
+      "reason": "Boreal conifer forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Rose_breasted_Grosbeak",
+      "rating": 0,
+      "reason": "Deciduous woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Pigeon_Guillemot",
+      "rating": 3,
+      "reason": "Diving seabird eating fish near coast",
+      "confidence": "high"
+     },
+     {
+      "species": "California_Gull",
+      "rating": 3,
+      "reason": "Gull foraging on water, shores and lakes",
+      "confidence": "medium"
+     },
+     {
+      "species": "Glaucous_winged_Gull",
+      "rating": 3,
+      "reason": "Coastal marine gull",
+      "confidence": "high"
+     },
+     {
+      "species": "Heermann_Gull",
+      "rating": 3,
+      "reason": "Marine coastal gull, steals fish from pelicans",
+      "confidence": "high"
+     },
+     {
+      "species": "Herring_Gull",
+      "rating": 3,
+      "reason": "Coastal gull feeding on water and shores",
+      "confidence": "high"
+     },
+     {
+      "species": "Ivory_Gull",
+      "rating": 3,
+      "reason": "Arctic sea-ice gull",
+      "confidence": "high"
+     },
+     {
+      "species": "Ring_billed_Gull",
+      "rating": 3,
+      "reason": "Gull of lakes and coasts feeding at water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Slaty_backed_Gull",
+      "rating": 3,
+      "reason": "Coastal marine gull",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Gull",
+      "rating": 3,
+      "reason": "Coastal marine gull",
+      "confidence": "high"
+     },
+     {
+      "species": "Anna_Hummingbird",
+      "rating": 0,
+      "reason": "Gardens and scrub nectar feeder",
+      "confidence": "high"
+     },
+     {
+      "species": "Ruby_throated_Hummingbird",
+      "rating": 0,
+      "reason": "Woodland edges and gardens",
+      "confidence": "high"
+     },
+     {
+      "species": "Rufous_Hummingbird",
+      "rating": 0,
+      "reason": "Meadows and forest edges",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_Violetear",
+      "rating": 0,
+      "reason": "Highland forest nectar feeder",
+      "confidence": "high"
+     },
+     {
+      "species": "Long_tailed_Jaeger",
+      "rating": 3,
+      "reason": "Pelagic seabird in winter, harasses seabirds",
+      "confidence": "medium"
+     },
+     {
+      "species": "Pomarine_Jaeger",
+      "rating": 3,
+      "reason": "Pelagic seabird, kleptoparasite at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_Jay",
+      "rating": 0,
+      "reason": "Forest and suburban omnivore",
+      "confidence": "high"
+     },
+     {
+      "species": "Florida_Jay",
+      "rating": 0,
+      "reason": "Scrub oak habitat",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_Jay",
+      "rating": 0,
+      "reason": "Subtropical woodland and brush",
+      "confidence": "high"
+     },
+     {
+      "species": "Dark_eyed_Junco",
+      "rating": 0,
+      "reason": "Forest floor seed eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Tropical_Kingbird",
+      "rating": 1,
+      "reason": "Open areas, often near water and wires",
+      "confidence": "medium"
+     },
+     {
+      "species": "Gray_Kingbird",
+      "rating": 1,
+      "reason": "Coastal mangroves and shores, hawks insects",
+      "confidence": "medium"
+     },
+     {
+      "species": "Belted_Kingfisher",
+      "rating": 3,
+      "reason": "Plunge-dives for fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_Kingfisher",
+      "rating": 3,
+      "reason": "Plunge-dives for fish in streams",
+      "confidence": "high"
+     },
+     {
+      "species": "Pied_Kingfisher",
+      "rating": 3,
+      "reason": "Hovers and dives for fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Ringed_Kingfisher",
+      "rating": 3,
+      "reason": "Plunge-dives for fish",
+      "confidence": "high"
+     },
+     {
+      "species": "White_breasted_Kingfisher",
+      "rating": 1,
+      "reason": "Often far from water, eats insects and lizards",
+      "confidence": "medium"
+     },
+     {
+      "species": "Red_legged_Kittiwake",
+      "rating": 3,
+      "reason": "Pelagic gull feeding at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Horned_Lark",
+      "rating": 0,
+      "reason": "Open bare ground and tundra",
+      "confidence": "high"
+     },
+     {
+      "species": "Pacific_Loon",
+      "rating": 3,
+      "reason": "Diving fish eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Mallard",
+      "rating": 3,
+      "reason": "Dabbling duck feeding in water",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Meadowlark",
+      "rating": 0,
+      "reason": "Grassland",
+      "confidence": "high"
+     },
+     {
+      "species": "Hooded_Merganser",
+      "rating": 3,
+      "reason": "Diving fish eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_breasted_Merganser",
+      "rating": 3,
+      "reason": "Diving fish eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Mockingbird",
+      "rating": 0,
+      "reason": "Open scrub and suburbs",
+      "confidence": "high"
+     },
+     {
+      "species": "Nighthawk",
+      "rating": 0,
+      "reason": "Aerial insect feeder over open land",
+      "confidence": "high"
+     },
+     {
+      "species": "Clark_Nutcracker",
+      "rating": 0,
+      "reason": "Mountain conifer forests",
+      "confidence": "high"
+     },
+     {
+      "species": "White_breasted_Nuthatch",
+      "rating": 0,
+      "reason": "Woodland trunk forager",
+      "confidence": "high"
+     },
+     {
+      "species": "Baltimore_Oriole",
+      "rating": 0,
+      "reason": "Deciduous woodland edge",
+      "confidence": "high"
+     },
+     {
+      "species": "Hooded_Oriole",
+      "rating": 0,
+      "reason": "Palms and arid woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Orchard_Oriole",
+      "rating": 1,
+      "reason": "Orchards and riparian edges near water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Scott_Oriole",
+      "rating": 0,
+      "reason": "Arid yucca and juniper slopes",
+      "confidence": "high"
+     },
+     {
+      "species": "Ovenbird",
+      "rating": 0,
+      "reason": "Forest floor",
+      "confidence": "high"
+     },
+     {
+      "species": "Brown_Pelican",
+      "rating": 3,
+      "reason": "Plunge-dives for fish at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "White_Pelican",
+      "rating": 3,
+      "reason": "Cooperative fishing on lakes",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Wood_Pewee",
+      "rating": 0,
+      "reason": "Woodland aerial insect feeder",
+      "confidence": "high"
+     },
+     {
+      "species": "Sayornis",
+      "rating": 1,
+      "reason": "Phoebes nest near water and bridges, catch insects",
+      "confidence": "medium"
+     },
+     {
+      "species": "American_Pipit",
+      "rating": 1,
+      "reason": "Tundra and shorelines, mudflats in winter",
+      "confidence": "medium"
+     },
+     {
+      "species": "Whip_poor_Will",
+      "rating": 0,
+      "reason": "Nocturnal woodland nightjar",
+      "confidence": "high"
+     },
+     {
+      "species": "Horned_Puffin",
+      "rating": 3,
+      "reason": "Diving seabird at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Common_Raven",
+      "rating": 0,
+      "reason": "Generalist of varied terrain",
+      "confidence": "high"
+     },
+     {
+      "species": "White_necked_Raven",
+      "rating": 0,
+      "reason": "Mountains and open country of Africa",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Redstart",
+      "rating": 0,
+      "reason": "Deciduous woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Geococcyx",
+      "rating": 0,
+      "reason": "Desert ground-dwelling roadrunner",
+      "confidence": "high"
+     },
+     {
+      "species": "Loggerhead_Shrike",
+      "rating": 0,
+      "reason": "Open scrub and grassland",
+      "confidence": "high"
+     },
+     {
+      "species": "Great_Grey_Shrike",
+      "rating": 0,
+      "reason": "Open scrub and woodland edges",
+      "confidence": "high"
+     },
+     {
+      "species": "Baird_Sparrow",
+      "rating": 0,
+      "reason": "Native prairie grassland",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_throated_Sparrow",
+      "rating": 0,
+      "reason": "Desert scrub",
+      "confidence": "high"
+     },
+     {
+      "species": "Brewer_Sparrow",
+      "rating": 0,
+      "reason": "Sagebrush",
+      "confidence": "high"
+     },
+     {
+      "species": "Chipping_Sparrow",
+      "rating": 0,
+      "reason": "Open woodland and lawns",
+      "confidence": "high"
+     },
+     {
+      "species": "Clay_colored_Sparrow",
+      "rating": 0,
+      "reason": "Brushy prairie",
+      "confidence": "high"
+     },
+     {
+      "species": "House_Sparrow",
+      "rating": 0,
+      "reason": "Human settlements",
+      "confidence": "high"
+     },
+     {
+      "species": "Field_Sparrow",
+      "rating": 0,
+      "reason": "Old fields and scrub",
+      "confidence": "high"
+     },
+     {
+      "species": "Fox_Sparrow",
+      "rating": 0,
+      "reason": "Thickets and forest undergrowth",
+      "confidence": "high"
+     },
+     {
+      "species": "Grasshopper_Sparrow",
+      "rating": 0,
+      "reason": "Dry grassland",
+      "confidence": "high"
+     },
+     {
+      "species": "Harris_Sparrow",
+      "rating": 0,
+      "reason": "Boreal scrub and winter thickets",
+      "confidence": "high"
+     },
+     {
+      "species": "Henslow_Sparrow",
+      "rating": 1,
+      "reason": "Damp weedy meadows",
+      "confidence": "medium"
+     },
+     {
+      "species": "Le_Conte_Sparrow",
+      "rating": 1,
+      "reason": "Wet grassy meadows and marsh edges",
+      "confidence": "medium"
+     },
+     {
+      "species": "Lincoln_Sparrow",
+      "rating": 1,
+      "reason": "Boggy thickets and wet meadows",
+      "confidence": "medium"
+     },
+     {
+      "species": "Nelson_Sharp_tailed_Sparrow",
+      "rating": 2,
+      "reason": "Lives in salt and freshwater marshes",
+      "confidence": "high"
+     },
+     {
+      "species": "Savannah_Sparrow",
+      "rating": 0,
+      "reason": "Open grassland and fields",
+      "confidence": "medium"
+     },
+     {
+      "species": "Seaside_Sparrow",
+      "rating": 2,
+      "reason": "Salt marsh specialist feeding on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Song_Sparrow",
+      "rating": 1,
+      "reason": "Thickets often near water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Tree_Sparrow",
+      "rating": 0,
+      "reason": "Tundra scrub and winter fields",
+      "confidence": "high"
+     },
+     {
+      "species": "Vesper_Sparrow",
+      "rating": 0,
+      "reason": "Dry open grassland",
+      "confidence": "high"
+     },
+     {
+      "species": "White_crowned_Sparrow",
+      "rating": 0,
+      "reason": "Shrubby habitats",
+      "confidence": "high"
+     },
+     {
+      "species": "White_throated_Sparrow",
+      "rating": 0,
+      "reason": "Forest understory",
+      "confidence": "high"
+     },
+     {
+      "species": "Cape_Glossy_Starling",
+      "rating": 0,
+      "reason": "Savanna and woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Bank_Swallow",
+      "rating": 1,
+      "reason": "Nests in riverbanks, forages over water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Barn_Swallow",
+      "rating": 1,
+      "reason": "Aerial feeder over open fields and water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Cliff_Swallow",
+      "rating": 1,
+      "reason": "Aerial feeder, uses mud near water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Tree_Swallow",
+      "rating": 1,
+      "reason": "Forages over water and wetlands",
+      "confidence": "medium"
+     },
+     {
+      "species": "Scarlet_Tanager",
+      "rating": 0,
+      "reason": "Forest canopy",
+      "confidence": "high"
+     },
+     {
+      "species": "Summer_Tanager",
+      "rating": 0,
+      "reason": "Woodland canopy",
+      "confidence": "high"
+     },
+     {
+      "species": "Artic_Tern",
+      "rating": 3,
+      "reason": "Plunge-dives for fish at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_Tern",
+      "rating": 3,
+      "reason": "Dips insects and fish from water, marsh nester",
+      "confidence": "high"
+     },
+     {
+      "species": "Caspian_Tern",
+      "rating": 3,
+      "reason": "Plunge-dives for fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Common_Tern",
+      "rating": 3,
+      "reason": "Plunge-dives for fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Elegant_Tern",
+      "rating": 3,
+      "reason": "Plunge-dives for fish at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Forsters_Tern",
+      "rating": 3,
+      "reason": "Plunge-dives in marshes and coasts",
+      "confidence": "high"
+     },
+     {
+      "species": "Least_Tern",
+      "rating": 3,
+      "reason": "Plunge-dives for small fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_tailed_Towhee",
+      "rating": 0,
+      "reason": "Mountain shrubland",
+      "confidence": "high"
+     },
+     {
+      "species": "Brown_Thrasher",
+      "rating": 0,
+      "reason": "Dense thickets and brush",
+      "confidence": "high"
+     },
+     {
+      "species": "Sage_Thrasher",
+      "rating": 0,
+      "reason": "Sagebrush steppe",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_capped_Vireo",
+      "rating": 0,
+      "reason": "Shrubby oak scrub",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_headed_Vireo",
+      "rating": 0,
+      "reason": "Coniferous and mixed forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Philadelphia_Vireo",
+      "rating": 0,
+      "reason": "Deciduous second growth",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_eyed_Vireo",
+      "rating": 0,
+      "reason": "Forest canopy",
+      "confidence": "high"
+     },
+     {
+      "species": "Warbling_Vireo",
+      "rating": 1,
+      "reason": "Deciduous trees, often riparian",
+      "confidence": "medium"
+     },
+     {
+      "species": "White_eyed_Vireo",
+      "rating": 0,
+      "reason": "Dense thickets",
+      "confidence": "high"
+     },
+     {
+      "species": "Yellow_throated_Vireo",
+      "rating": 0,
+      "reason": "Mature deciduous woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Bay_breasted_Warbler",
+      "rating": 0,
+      "reason": "Boreal conifer forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_and_white_Warbler",
+      "rating": 0,
+      "reason": "Forest trunk creeper",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_throated_Blue_Warbler",
+      "rating": 0,
+      "reason": "Forest understory",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_winged_Warbler",
+      "rating": 0,
+      "reason": "Old fields and scrub",
+      "confidence": "high"
+     },
+     {
+      "species": "Canada_Warbler",
+      "rating": 1,
+      "reason": "Moist forest understory, swampy thickets",
+      "confidence": "medium"
+     },
+     {
+      "species": "Cape_May_Warbler",
+      "rating": 0,
+      "reason": "Spruce forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Cerulean_Warbler",
+      "rating": 0,
+      "reason": "Forest canopy",
+      "confidence": "high"
+     },
+     {
+      "species": "Chestnut_sided_Warbler",
+      "rating": 0,
+      "reason": "Young second growth",
+      "confidence": "high"
+     },
+     {
+      "species": "Golden_winged_Warbler",
+      "rating": 0,
+      "reason": "Shrubby early successional habitat",
+      "confidence": "high"
+     },
+     {
+      "species": "Hooded_Warbler",
+      "rating": 0,
+      "reason": "Forest understory",
+      "confidence": "high"
+     },
+     {
+      "species": "Kentucky_Warbler",
+      "rating": 0,
+      "reason": "Moist forest floor",
+      "confidence": "medium"
+     },
+     {
+      "species": "Magnolia_Warbler",
+      "rating": 0,
+      "reason": "Conifer forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Mourning_Warbler",
+      "rating": 0,
+      "reason": "Dense regrowth thickets",
+      "confidence": "high"
+     },
+     {
+      "species": "Myrtle_Warbler",
+      "rating": 0,
+      "reason": "Conifer and mixed forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Nashville_Warbler",
+      "rating": 0,
+      "reason": "Open woodland and bogs edge",
+      "confidence": "high"
+     },
+     {
+      "species": "Orange_crowned_Warbler",
+      "rating": 0,
+      "reason": "Shrubby woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Palm_Warbler",
+      "rating": 1,
+      "reason": "Bogs and ground foraging near wet edges",
+      "confidence": "medium"
+     },
+     {
+      "species": "Pine_Warbler",
+      "rating": 0,
+      "reason": "Pine forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Prairie_Warbler",
+      "rating": 0,
+      "reason": "Scrub, with some mangrove use",
+      "confidence": "high"
+     },
+     {
+      "species": "Prothonotary_Warbler",
+      "rating": 2,
+      "reason": "Nests in flooded swamp forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Swainson_Warbler",
+      "rating": 1,
+      "reason": "Swampy canebrakes and damp thickets",
+      "confidence": "medium"
+     },
+     {
+      "species": "Tennessee_Warbler",
+      "rating": 0,
+      "reason": "Boreal forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Wilson_Warbler",
+      "rating": 1,
+      "reason": "Moist willow thickets and streamsides",
+      "confidence": "medium"
+     },
+     {
+      "species": "Worm_eating_Warbler",
+      "rating": 0,
+      "reason": "Dry forested hillsides",
+      "confidence": "high"
+     },
+     {
+      "species": "Yellow_Warbler",
+      "rating": 1,
+      "reason": "Willow thickets near water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Northern_Waterthrush",
+      "rating": 2,
+      "reason": "Swamps and pond edges, foraging in wet margins",
+      "confidence": "high"
+     },
+     {
+      "species": "Louisiana_Waterthrush",
+      "rating": 2,
+      "reason": "Forested streams, forages along stream edges",
+      "confidence": "high"
+     },
+     {
+      "species": "Bohemian_Waxwing",
+      "rating": 0,
+      "reason": "Boreal forest fruit eater",
+      "confidence": "high"
+     },
+     {
+      "species": "Cedar_Waxwing",
+      "rating": 0,
+      "reason": "Fruit eater of woodland edges",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Three_toed_Woodpecker",
+      "rating": 0,
+      "reason": "Boreal conifer forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Pileated_Woodpecker",
+      "rating": 0,
+      "reason": "Mature forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_bellied_Woodpecker",
+      "rating": 0,
+      "reason": "Woodland and suburbs",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_cockaded_Woodpecker",
+      "rating": 0,
+      "reason": "Mature pine forest",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_headed_Woodpecker",
+      "rating": 0,
+      "reason": "Open woodland and savanna",
+      "confidence": "high"
+     },
+     {
+      "species": "Downy_Woodpecker",
+      "rating": 0,
+      "reason": "Woodland and suburbs",
+      "confidence": "high"
+     },
+     {
+      "species": "Bewick_Wren",
+      "rating": 0,
+      "reason": "Brushy thickets",
+      "confidence": "high"
+     },
+     {
+      "species": "Cactus_Wren",
+      "rating": 0,
+      "reason": "Desert scrub",
+      "confidence": "high"
+     },
+     {
+      "species": "Carolina_Wren",
+      "rating": 0,
+      "reason": "Woodland thickets",
+      "confidence": "high"
+     },
+     {
+      "species": "House_Wren",
+      "rating": 0,
+      "reason": "Woodland edges and gardens",
+      "confidence": "high"
+     },
+     {
+      "species": "Marsh_Wren",
+      "rating": 2,
+      "reason": "Nests in cattail and reed marshes",
+      "confidence": "high"
+     },
+     {
+      "species": "Rock_Wren",
+      "rating": 0,
+      "reason": "Rocky arid slopes",
+      "confidence": "high"
+     },
+     {
+      "species": "Winter_Wren",
+      "rating": 0,
+      "reason": "Dense coniferous forest understory",
+      "confidence": "high"
+     },
+     {
+      "species": "Common_Yellowthroat",
+      "rating": 2,
+      "reason": "Marsh and wet thicket specialist",
+      "confidence": "medium"
+     }
+    ]
+   },
+   {
+    "key": "C",
+    "desc": "Haiku, rubric",
+    "ratings": [
+     {
+      "species": "Black_footed_Albatross",
+      "rating": 3,
+      "reason": "Pelagic seabird that picks food from the sea surface over open ocean",
+      "confidence": "high"
+     },
+     {
+      "species": "Laysan_Albatross",
+      "rating": 3,
+      "reason": "Pelagic seabird feeding on squid and fish from the ocean surface",
+      "confidence": "high"
+     },
+     {
+      "species": "Sooty_Albatross",
+      "rating": 3,
+      "reason": "Spends nearly its whole life at sea, surface-feeding over open ocean",
+      "confidence": "high"
+     },
+     {
+      "species": "Groove_billed_Ani",
+      "rating": 0,
+      "reason": "Brushy scrub, pastures and thickets; water plays no special role",
+      "confidence": "medium"
+     },
+     {
+      "species": "Crested_Auklet",
+      "rating": 3,
+      "reason": "Diving seabird that feeds underwater on plankton in open ocean",
+      "confidence": "high"
+     },
+     {
+      "species": "Least_Auklet",
+      "rating": 3,
+      "reason": "Pelagic diver feeding on zooplankton in northern seas",
+      "confidence": "high"
+     },
+     {
+      "species": "Parakeet_Auklet",
+      "rating": 3,
+      "reason": "Diving seabird feeding on plankton at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Rhinoceros_Auklet",
+      "rating": 3,
+      "reason": "Pursuit-diving seabird catching fish underwater at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Brewer_Blackbird",
+      "rating": 1,
+      "reason": "Open fields, towns and marsh edges; occasionally forages near water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Red_winged_Blackbird",
+      "rating": 2,
+      "reason": "Nests in marshes and cattails but forages mainly on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Rusty_Blackbird",
+      "rating": 2,
+      "reason": "Breeds in boreal bogs and swamps, feeds in shallow water and wet ground",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_headed_Blackbird",
+      "rating": 2,
+      "reason": "Lives in cattail marshes, nests over water, forages mostly on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Bobolink",
+      "rating": 0,
+      "reason": "Hayfields and grasslands; no dependence on water",
+      "confidence": "high"
+     },
+     {
+      "species": "Indigo_Bunting",
+      "rating": 0,
+      "reason": "Brushy edges and clearings in open woodland",
+      "confidence": "high"
+     },
+     {
+      "species": "Lazuli_Bunting",
+      "rating": 1,
+      "reason": "Brushy scrub, often along streams and riparian thickets in the West",
+      "confidence": "low"
+     },
+     {
+      "species": "Painted_Bunting",
+      "rating": 0,
+      "reason": "Dense thickets and scrub edges, not tied to water",
+      "confidence": "high"
+     },
+     {
+      "species": "Cardinal",
+      "rating": 0,
+      "reason": "Woodland edges, gardens and thickets; no water dependence",
+      "confidence": "high"
+     },
+     {
+      "species": "Spotted_Catbird",
+      "rating": 0,
+      "reason": "Australasian bowerbird of rainforest understory and forest edges",
+      "confidence": "medium"
+     },
+     {
+      "species": "Gray_Catbird",
+      "rating": 1,
+      "reason": "Dense shrubby thickets, often near water and wet hedgerows",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_breasted_Chat",
+      "rating": 1,
+      "reason": "Dense riparian thickets and streamside scrub, feeds on land",
+      "confidence": "medium"
+     },
+     {
+      "species": "Eastern_Towhee",
+      "rating": 0,
+      "reason": "Scrub, forest edges and thickets; feeds on the ground",
+      "confidence": "high"
+     },
+     {
+      "species": "Chuck_will_Widow",
+      "rating": 0,
+      "reason": "Nightjar of forest and woodland, hunts insects on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Brandt_Cormorant",
+      "rating": 3,
+      "reason": "Marine diving bird pursuing fish underwater along coasts",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_faced_Cormorant",
+      "rating": 3,
+      "reason": "Marine cormorant diving for fish along northern Pacific coasts",
+      "confidence": "high"
+     },
+     {
+      "species": "Pelagic_Cormorant",
+      "rating": 3,
+      "reason": "Coastal diving bird that pursues fish and invertebrates underwater",
+      "confidence": "high"
+     },
+     {
+      "species": "Bronzed_Cowbird",
+      "rating": 1,
+      "reason": "Open habitats and marsh edges, often near water in the Southwest",
+      "confidence": "low"
+     },
+     {
+      "species": "Shiny_Cowbird",
+      "rating": 1,
+      "reason": "Open country and wetland edges, forages near water in the tropics",
+      "confidence": "medium"
+     },
+     {
+      "species": "Brown_Creeper",
+      "rating": 0,
+      "reason": "Creeps up forest tree trunks for insects; no water tie",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Crow",
+      "rating": 1,
+      "reason": "Generalist that often forages along shorelines and beaches",
+      "confidence": "medium"
+     },
+     {
+      "species": "Fish_Crow",
+      "rating": 2,
+      "reason": "Coastal and riverside crow that scavenges shorelines and shallow water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Black_billed_Cuckoo",
+      "rating": 0,
+      "reason": "Woodland edges and thickets, feeds on caterpillars on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Mangrove_Cuckoo",
+      "rating": 2,
+      "reason": "Lives in mangroves and coastal thickets, forages in vegetation",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_billed_Cuckoo",
+      "rating": 0,
+      "reason": "Woodland and thicket dweller feeding on insects in foliage",
+      "confidence": "medium"
+     },
+     {
+      "species": "Gray_crowned_Rosy_Finch",
+      "rating": 0,
+      "reason": "Alpine and high-mountain finch of snowfields and rocky slopes",
+      "confidence": "high"
+     },
+     {
+      "species": "Purple_Finch",
+      "rating": 0,
+      "reason": "Coniferous and mixed forests, gardens; no water dependence",
+      "confidence": "high"
+     },
+     {
+      "species": "Northern_Flicker",
+      "rating": 0,
+      "reason": "Woodlands and open country, forages for ants on the ground",
+      "confidence": "high"
+     },
+     {
+      "species": "Acadian_Flycatcher",
+      "rating": 1,
+      "reason": "Moist deciduous forest often near streams and swamp edges",
+      "confidence": "medium"
+     },
+     {
+      "species": "Great_Crested_Flycatcher",
+      "rating": 0,
+      "reason": "Forest canopy and woodland edges, catches insects on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Least_Flycatcher",
+      "rating": 0,
+      "reason": "Deciduous woodland and orchards, insect hunter on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Olive_sided_Flycatcher",
+      "rating": 0,
+      "reason": "Conifer forest edges and snags, hawks insects in the air",
+      "confidence": "high"
+     },
+     {
+      "species": "Scissor_tailed_Flycatcher",
+      "rating": 0,
+      "reason": "Open country, fencerows and grassland, no water tie",
+      "confidence": "high"
+     },
+     {
+      "species": "Vermilion_Flycatcher",
+      "rating": 1,
+      "reason": "Arid open woodland often near ponds, sallies for insects over water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_bellied_Flycatcher",
+      "rating": 1,
+      "reason": "Breeds in mossy boreal bogs and damp coniferous forest",
+      "confidence": "low"
+     },
+     {
+      "species": "Frigatebird",
+      "rating": 3,
+      "reason": "Seabird that snatches fish from the water surface and lives at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Northern_Fulmar",
+      "rating": 3,
+      "reason": "Oceanic seabird that feeds on surface prey and spends life at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Gadwall",
+      "rating": 3,
+      "reason": "Dabbling duck that swims and feeds on aquatic plants in water",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Goldfinch",
+      "rating": 0,
+      "reason": "Weedy fields and gardens, feeds on seeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "European_Goldfinch",
+      "rating": 0,
+      "reason": "Open farmland, gardens and scrub; feeds on seeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Boat_tailed_Grackle",
+      "rating": 2,
+      "reason": "Coastal marshes, beaches and mangroves, mostly forages on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Eared_Grebe",
+      "rating": 3,
+      "reason": "Diving grebe of lakes and saline wetlands, eats aquatic invertebrates",
+      "confidence": "high"
+     },
+     {
+      "species": "Horned_Grebe",
+      "rating": 3,
+      "reason": "Diving waterbird of lakes and coasts, catches prey underwater",
+      "confidence": "high"
+     },
+     {
+      "species": "Pied_billed_Grebe",
+      "rating": 3,
+      "reason": "Diving grebe of ponds and marshes, catches prey underwater",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Grebe",
+      "rating": 3,
+      "reason": "Diving waterbird of large lakes, spears fish underwater",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_Grosbeak",
+      "rating": 0,
+      "reason": "Brushy field edges and roadsides, feeds on land",
+      "confidence": "medium"
+     },
+     {
+      "species": "Evening_Grosbeak",
+      "rating": 0,
+      "reason": "Coniferous and mixed forests, feeds on seeds and buds",
+      "confidence": "high"
+     },
+     {
+      "species": "Pine_Grosbeak",
+      "rating": 0,
+      "reason": "Boreal and mountain conifer forest, feeds on buds and seeds",
+      "confidence": "high"
+     },
+     {
+      "species": "Rose_breasted_Grosbeak",
+      "rating": 0,
+      "reason": "Deciduous woodland edges and thickets, feeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Pigeon_Guillemot",
+      "rating": 3,
+      "reason": "Diving seabird that pursues small fish underwater along coasts",
+      "confidence": "high"
+     },
+     {
+      "species": "California_Gull",
+      "rating": 2,
+      "reason": "Inland lakes and coasts, forages widely on land as well as water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Glaucous_winged_Gull",
+      "rating": 3,
+      "reason": "Coastal gull that picks food from water and spends much time at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Heermann_Gull",
+      "rating": 3,
+      "reason": "Seabird that feeds on fish and surface prey along Pacific coasts",
+      "confidence": "high"
+     },
+     {
+      "species": "Herring_Gull",
+      "rating": 3,
+      "reason": "Coastal gull that swims, picks food from water and lives near sea",
+      "confidence": "medium"
+     },
+     {
+      "species": "Ivory_Gull",
+      "rating": 2,
+      "reason": "Arctic gull of sea-ice edges, scavenges mostly on ice and land",
+      "confidence": "medium"
+     },
+     {
+      "species": "Ring_billed_Gull",
+      "rating": 2,
+      "reason": "Lakes and parking lots, often forages on land as well as water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Slaty_backed_Gull",
+      "rating": 3,
+      "reason": "Northern Pacific gull feeding on shore and sea surface prey",
+      "confidence": "medium"
+     },
+     {
+      "species": "Western_Gull",
+      "rating": 3,
+      "reason": "Coastal gull that picks prey from the sea and spends time on water",
+      "confidence": "high"
+     },
+     {
+      "species": "Anna_Hummingbird",
+      "rating": 0,
+      "reason": "Gardens, chaparral and woodland edges; nectar and insects on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Ruby_throated_Hummingbird",
+      "rating": 0,
+      "reason": "Woodland edges and gardens; feeds on flower nectar in the air",
+      "confidence": "high"
+     },
+     {
+      "species": "Rufous_Hummingbird",
+      "rating": 0,
+      "reason": "Mountain meadows and forest edges; nectar feeder with no water tie",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_Violetear",
+      "rating": 0,
+      "reason": "Neotropical forest edges and gardens; nectar feeder on land",
+      "confidence": "medium"
+     },
+     {
+      "species": "Long_tailed_Jaeger",
+      "rating": 3,
+      "reason": "Pelagic seabird that spends most of its life at sea over open water",
+      "confidence": "high"
+     },
+     {
+      "species": "Pomarine_Jaeger",
+      "rating": 3,
+      "reason": "Pelagic seabird spending most of its life over open ocean",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_Jay",
+      "rating": 0,
+      "reason": "Woodlands, suburbs and oak edges; forages on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Florida_Jay",
+      "rating": 0,
+      "reason": "Scrub-Jay of xeric oak scrub, no water dependence",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_Jay",
+      "rating": 0,
+      "reason": "Subtropical woodland and brush, feeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Dark_eyed_Junco",
+      "rating": 0,
+      "reason": "Forest edges and ground in open woods, no water dependence",
+      "confidence": "high"
+     },
+     {
+      "species": "Tropical_Kingbird",
+      "rating": 1,
+      "reason": "Open areas with trees, often near water, sallies for insects",
+      "confidence": "medium"
+     },
+     {
+      "species": "Gray_Kingbird",
+      "rating": 1,
+      "reason": "Coastal scrub and beaches, sometimes sallies for insects over water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Belted_Kingfisher",
+      "rating": 3,
+      "reason": "Plunge-diving fish hunter that depends on streams, lakes and coasts",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_Kingfisher",
+      "rating": 3,
+      "reason": "Plunge-diving kingfisher catching small fish in streams",
+      "confidence": "high"
+     },
+     {
+      "species": "Pied_Kingfisher",
+      "rating": 3,
+      "reason": "Hovers and plunge-dives for fish over open water",
+      "confidence": "high"
+     },
+     {
+      "species": "Ringed_Kingfisher",
+      "rating": 3,
+      "reason": "Large kingfisher that plunge-dives for fish in rivers and lakes",
+      "confidence": "high"
+     },
+     {
+      "species": "White_breasted_Kingfisher",
+      "rating": 2,
+      "reason": "Mostly hunts insects and small prey on land, sometimes plunge-dives",
+      "confidence": "medium"
+     },
+     {
+      "species": "Red_legged_Kittiwake",
+      "rating": 3,
+      "reason": "Pelagic gull relative that feeds on the sea surface and lives at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Horned_Lark",
+      "rating": 0,
+      "reason": "Open ground, tundra and fields; feeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Pacific_Loon",
+      "rating": 3,
+      "reason": "Diving loon that catches fish underwater on lakes and coastal seas",
+      "confidence": "high"
+     },
+     {
+      "species": "Mallard",
+      "rating": 3,
+      "reason": "Dabbling duck that swims and feeds on water plants and invertebrates",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Meadowlark",
+      "rating": 0,
+      "reason": "Grasslands and fields; feeds on insects and seeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Hooded_Merganser",
+      "rating": 3,
+      "reason": "Diving duck that catches fish and invertebrates underwater in wooded ponds",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_breasted_Merganser",
+      "rating": 3,
+      "reason": "Diving duck that pursues fish underwater along coasts and lakes",
+      "confidence": "high"
+     },
+     {
+      "species": "Mockingbird",
+      "rating": 0,
+      "reason": "Suburbs, hedges and open scrub; forages on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Nighthawk",
+      "rating": 1,
+      "reason": "Open habitats; aerial insect feeder that sometimes hunts over water",
+      "confidence": "low"
+     },
+     {
+      "species": "Clark_Nutcracker",
+      "rating": 0,
+      "reason": "Mountain conifer forests, caches seeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "White_breasted_Nuthatch",
+      "rating": 0,
+      "reason": "Deciduous and mixed woodland, forages on tree bark",
+      "confidence": "high"
+     },
+     {
+      "species": "Baltimore_Oriole",
+      "rating": 0,
+      "reason": "Tall shade trees and riparian edges, feeds in foliage on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Hooded_Oriole",
+      "rating": 0,
+      "reason": "Palms and desert woodland, feeds on nectar and fruit on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Orchard_Oriole",
+      "rating": 0,
+      "reason": "Open woodland and orchards, feeds on insects in trees",
+      "confidence": "high"
+     },
+     {
+      "species": "Scott_Oriole",
+      "rating": 0,
+      "reason": "Desert and arid woodland of the Southwest, no water tie",
+      "confidence": "high"
+     },
+     {
+      "species": "Ovenbird",
+      "rating": 0,
+      "reason": "Forest floor songbird that forages on leaf litter away from water",
+      "confidence": "high"
+     },
+     {
+      "species": "Brown_Pelican",
+      "rating": 3,
+      "reason": "Plunge-diving seabird that catches fish from the ocean surface",
+      "confidence": "high"
+     },
+     {
+      "species": "White_Pelican",
+      "rating": 3,
+      "reason": "Surface-feeding pelican that herds fish on lakes and coastal waters",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Wood_Pewee",
+      "rating": 0,
+      "reason": "Open woodland flycatcher that hawks insects in the air",
+      "confidence": "high"
+     },
+     {
+      "species": "Sayornis",
+      "rating": 1,
+      "reason": "Phoebes that often nest near streams, bridges and water, catching insects",
+      "confidence": "medium"
+     },
+     {
+      "species": "American_Pipit",
+      "rating": 0,
+      "reason": "Tundra and open ground pipit that occasionally forages at water edges",
+      "confidence": "medium"
+     },
+     {
+      "species": "Whip_poor_Will",
+      "rating": 0,
+      "reason": "Nightjar of forest and woodland edges, hunts insects on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Horned_Puffin",
+      "rating": 3,
+      "reason": "Seabird that dives for fish underwater and spends life at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Common_Raven",
+      "rating": 0,
+      "reason": "Adaptable corvid of forests, deserts and cliffs, forages on land",
+      "confidence": "high"
+     },
+     {
+      "species": "White_necked_Raven",
+      "rating": 0,
+      "reason": "African raven of dry savanna and open country, no water tie",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Redstart",
+      "rating": 0,
+      "reason": "Deciduous woodland warbler that flycatches insects in trees",
+      "confidence": "high"
+     },
+     {
+      "species": "Geococcyx",
+      "rating": 0,
+      "reason": "Roadrunner of arid scrub and desert, runs on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Loggerhead_Shrike",
+      "rating": 0,
+      "reason": "Open country with perches and thickets, hunts prey on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Great_Grey_Shrike",
+      "rating": 0,
+      "reason": "Open country and tundra edges, hunts insects and small vertebrates on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Baird_Sparrow",
+      "rating": 0,
+      "reason": "Northern prairie grassland sparrow feeding on the ground",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_throated_Sparrow",
+      "rating": 0,
+      "reason": "Desert scrub sparrow that feeds on land, no water dependence",
+      "confidence": "high"
+     },
+     {
+      "species": "Brewer_Sparrow",
+      "rating": 0,
+      "reason": "Sagebrush and shrub steppe, feeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Chipping_Sparrow",
+      "rating": 0,
+      "reason": "Open woodland, lawns and parks, feeds on seeds on the ground",
+      "confidence": "high"
+     },
+     {
+      "species": "Clay_colored_Sparrow",
+      "rating": 0,
+      "reason": "Prairie shrub and open country, feeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "House_Sparrow",
+      "rating": 0,
+      "reason": "Human settlements and farms, feeds on seeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Field_Sparrow",
+      "rating": 0,
+      "reason": "Old fields and shrubby pasture, feeds on the ground",
+      "confidence": "high"
+     },
+     {
+      "species": "Fox_Sparrow",
+      "rating": 0,
+      "reason": "Thickets and forest edges, scratches for food on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Grasshopper_Sparrow",
+      "rating": 0,
+      "reason": "Grassland sparrow feeding on insects and seeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Harris_Sparrow",
+      "rating": 0,
+      "reason": "Shrubby forest edges and thickets, feeds on the ground",
+      "confidence": "high"
+     },
+     {
+      "species": "Henslow_Sparrow",
+      "rating": 0,
+      "reason": "Grassy fields and meadows, feeds on land",
+      "confidence": "medium"
+     },
+     {
+      "species": "Le_Conte_Sparrow",
+      "rating": 1,
+      "reason": "Wet grassy meadows and marsh edges, feeds on land",
+      "confidence": "medium"
+     },
+     {
+      "species": "Lincoln_Sparrow",
+      "rating": 1,
+      "reason": "Wet meadows, bogs and willow thickets, feeds on the ground",
+      "confidence": "medium"
+     },
+     {
+      "species": "Nelson_Sharp_tailed_Sparrow",
+      "rating": 2,
+      "reason": "Salt and brackish marsh specialist, forages in marsh vegetation",
+      "confidence": "high"
+     },
+     {
+      "species": "Savannah_Sparrow",
+      "rating": 0,
+      "reason": "Grasslands and coastal meadows, feeds on land",
+      "confidence": "medium"
+     },
+     {
+      "species": "Seaside_Sparrow",
+      "rating": 2,
+      "reason": "Salt marsh specialist that forages on marsh vegetation and ground",
+      "confidence": "high"
+     },
+     {
+      "species": "Song_Sparrow",
+      "rating": 1,
+      "reason": "Common near marsh edges, streams and wet thickets, feeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Tree_Sparrow",
+      "rating": 0,
+      "reason": "Tundra and shrub edges, feeds on seeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Vesper_Sparrow",
+      "rating": 0,
+      "reason": "Open fields and grassland, feeds on the ground",
+      "confidence": "high"
+     },
+     {
+      "species": "White_crowned_Sparrow",
+      "rating": 0,
+      "reason": "Shrubby edges and tundra, feeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "White_throated_Sparrow",
+      "rating": 0,
+      "reason": "Woodland edges and thickets, feeds on the ground",
+      "confidence": "high"
+     },
+     {
+      "species": "Cape_Glossy_Starling",
+      "rating": 0,
+      "reason": "African starling of woodland, savanna and towns, feeds on land",
+      "confidence": "medium"
+     },
+     {
+      "species": "Bank_Swallow",
+      "rating": 2,
+      "reason": "Nests in riverbank sand banks and hawks insects over water",
+      "confidence": "high"
+     },
+     {
+      "species": "Barn_Swallow",
+      "rating": 1,
+      "reason": "Farms and open country, often hawks insects over water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Cliff_Swallow",
+      "rating": 1,
+      "reason": "Nests on cliffs and bridges, feeds on insects over fields and water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Tree_Swallow",
+      "rating": 2,
+      "reason": "Nests in marsh and pond edges, hawks insects over water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Scarlet_Tanager",
+      "rating": 0,
+      "reason": "Mature deciduous forest canopy, feeds on insects in trees",
+      "confidence": "high"
+     },
+     {
+      "species": "Summer_Tanager",
+      "rating": 0,
+      "reason": "Southern woodland canopy, feeds on insects and fruit in trees",
+      "confidence": "high"
+     },
+     {
+      "species": "Artic_Tern",
+      "rating": 3,
+      "reason": "Long-distance seabird that plunge-dives for fish at sea",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_Tern",
+      "rating": 3,
+      "reason": "Marsh tern that picks insects and fish from the water surface",
+      "confidence": "high"
+     },
+     {
+      "species": "Caspian_Tern",
+      "rating": 3,
+      "reason": "Large tern that plunge-dives for fish in lakes and coasts",
+      "confidence": "high"
+     },
+     {
+      "species": "Common_Tern",
+      "rating": 3,
+      "reason": "Plunge-diving seabird that catches fish at sea and coasts",
+      "confidence": "high"
+     },
+     {
+      "species": "Elegant_Tern",
+      "rating": 3,
+      "reason": "Coastal seabird that plunge-dives for small fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Forsters_Tern",
+      "rating": 3,
+      "reason": "Marsh and coastal tern that plunge-dives for fish",
+      "confidence": "high"
+     },
+     {
+      "species": "Least_Tern",
+      "rating": 3,
+      "reason": "Small tern that plunge-dives for small fish near shores",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_tailed_Towhee",
+      "rating": 0,
+      "reason": "Shrubby mountain slopes, feeds on the ground",
+      "confidence": "high"
+     },
+     {
+      "species": "Brown_Thrasher",
+      "rating": 0,
+      "reason": "Hedgerows and thickets, forages on leaf litter on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Sage_Thrasher",
+      "rating": 0,
+      "reason": "Sagebrush steppe, feeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_capped_Vireo",
+      "rating": 0,
+      "reason": "Scrubby oak and juniper thickets, feeds in foliage",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_headed_Vireo",
+      "rating": 0,
+      "reason": "Coniferous and mixed forest, gleans insects from branches",
+      "confidence": "high"
+     },
+     {
+      "species": "Philadelphia_Vireo",
+      "rating": 0,
+      "reason": "Boreal and northern forest, gleans insects from foliage",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_eyed_Vireo",
+      "rating": 0,
+      "reason": "Deciduous forest canopy, gleans insects from leaves",
+      "confidence": "high"
+     },
+     {
+      "species": "Warbling_Vireo",
+      "rating": 1,
+      "reason": "Riparian cottonwoods and willows near streams, gleans insects in foliage",
+      "confidence": "low"
+     },
+     {
+      "species": "White_eyed_Vireo",
+      "rating": 0,
+      "reason": "Dense thickets and scrub edges, feeds in shrubs",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_throated_Vireo",
+      "rating": 0,
+      "reason": "Deciduous woodland canopy, gleans insects from leaves",
+      "confidence": "high"
+     },
+     {
+      "species": "Bay_breasted_Warbler",
+      "rating": 0,
+      "reason": "Boreal and spruce forest canopy, feeds on insects in trees",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_and_white_Warbler",
+      "rating": 0,
+      "reason": "Deciduous forest, creeps along tree trunks for insects",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_throated_Blue_Warbler",
+      "rating": 0,
+      "reason": "Understory of deciduous forest, gleans insects on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_winged_Warbler",
+      "rating": 0,
+      "reason": "Old fields and shrubby edges, feeds on insects in vegetation",
+      "confidence": "high"
+     },
+     {
+      "species": "Canada_Warbler",
+      "rating": 2,
+      "reason": "Wet forest understory and swamp edges near streams, feeds in shrubs",
+      "confidence": "low"
+     },
+     {
+      "species": "Cape_May_Warbler",
+      "rating": 0,
+      "reason": "Spruce forest canopy, feeds on insects and nectar in trees",
+      "confidence": "high"
+     },
+     {
+      "species": "Cerulean_Warbler",
+      "rating": 0,
+      "reason": "Canopy of mature deciduous forest, feeds on insects in trees",
+      "confidence": "high"
+     },
+     {
+      "species": "Chestnut_sided_Warbler",
+      "rating": 0,
+      "reason": "Second-growth shrubby fields and edges, feeds on insects on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Golden_winged_Warbler",
+      "rating": 0,
+      "reason": "Young forest and shrubby fields, gleans insects on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Hooded_Warbler",
+      "rating": 1,
+      "reason": "Moist deciduous forest understory often near streams, feeds on the ground",
+      "confidence": "medium"
+     },
+     {
+      "species": "Kentucky_Warbler",
+      "rating": 1,
+      "reason": "Moist forest floor in ravines near streams, forages on the ground",
+      "confidence": "low"
+     },
+     {
+      "species": "Magnolia_Warbler",
+      "rating": 0,
+      "reason": "Conifer and mixed forest edges, gleans insects from foliage",
+      "confidence": "high"
+     },
+     {
+      "species": "Mourning_Warbler",
+      "rating": 0,
+      "reason": "Dense thickets and clearings, feeds on insects low in shrubs",
+      "confidence": "medium"
+     },
+     {
+      "species": "Myrtle_Warbler",
+      "rating": 0,
+      "reason": "Conifer and mixed woods, gleans insects and berries from trees",
+      "confidence": "high"
+     },
+     {
+      "species": "Nashville_Warbler",
+      "rating": 0,
+      "reason": "Shrubby edges and young forest, gleans insects on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Orange_crowned_Warbler",
+      "rating": 0,
+      "reason": "Shrubby thickets and forest edges, feeds on the ground and shrubs",
+      "confidence": "high"
+     },
+     {
+      "species": "Palm_Warbler",
+      "rating": 1,
+      "reason": "Breeds in bogs and wet areas, forages on the ground near water",
+      "confidence": "medium"
+     },
+     {
+      "species": "Pine_Warbler",
+      "rating": 0,
+      "reason": "Pine forests, gleans insects from conifer needles",
+      "confidence": "high"
+     },
+     {
+      "species": "Prairie_Warbler",
+      "rating": 0,
+      "reason": "Shrubby scrub and open woodland, gleans insects in shrubs",
+      "confidence": "high"
+     },
+     {
+      "species": "Prothonotary_Warbler",
+      "rating": 2,
+      "reason": "Swamp and flooded forest specialist nesting over water, forages on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Swainson_Warbler",
+      "rating": 1,
+      "reason": "Canebrakes and wet forest understory, forages on the ground",
+      "confidence": "medium"
+     },
+     {
+      "species": "Tennessee_Warbler",
+      "rating": 0,
+      "reason": "Boreal forest edges and clearings, gleans insects in foliage",
+      "confidence": "high"
+     },
+     {
+      "species": "Wilson_Warbler",
+      "rating": 0,
+      "reason": "Shrubby thickets, sometimes streamside, gleans insects in shrubs",
+      "confidence": "medium"
+     },
+     {
+      "species": "Worm_eating_Warbler",
+      "rating": 0,
+      "reason": "Dry hillside forest understory, forages on leaf litter",
+      "confidence": "high"
+     },
+     {
+      "species": "Yellow_Warbler",
+      "rating": 1,
+      "reason": "Willows and riparian thickets near water, gleans insects in foliage",
+      "confidence": "high"
+     },
+     {
+      "species": "Northern_Waterthrush",
+      "rating": 2,
+      "reason": "Forages along stream and pond edges by walking on shore and logs",
+      "confidence": "high"
+     },
+     {
+      "species": "Louisiana_Waterthrush",
+      "rating": 2,
+      "reason": "Forages along clear forest streams, wading and picking from shore",
+      "confidence": "high"
+     },
+     {
+      "species": "Bohemian_Waxwing",
+      "rating": 0,
+      "reason": "Northern forests and towns, feeds on berries in trees",
+      "confidence": "high"
+     },
+     {
+      "species": "Cedar_Waxwing",
+      "rating": 0,
+      "reason": "Woodland edges and fruit trees, feeds on berries and insects in trees",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Three_toed_Woodpecker",
+      "rating": 0,
+      "reason": "Boreal conifer forest, feeds on insects in dead trees",
+      "confidence": "high"
+     },
+     {
+      "species": "Pileated_Woodpecker",
+      "rating": 0,
+      "reason": "Mature forest, excavates insects from trees on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_bellied_Woodpecker",
+      "rating": 0,
+      "reason": "Woodland and suburbs, forages on tree trunks and ground",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_cockaded_Woodpecker",
+      "rating": 0,
+      "reason": "Old-growth pine forest, excavates cavities in living pines",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_headed_Woodpecker",
+      "rating": 0,
+      "reason": "Open woodland and savanna, forages on insects and nuts on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Downy_Woodpecker",
+      "rating": 0,
+      "reason": "Woodlands and gardens, forages on branches and trunks",
+      "confidence": "high"
+     },
+     {
+      "species": "Bewick_Wren",
+      "rating": 0,
+      "reason": "Thickets and brushy woodland edges, forages on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Cactus_Wren",
+      "rating": 0,
+      "reason": "Desert cactus and scrub, feeds on insects on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Carolina_Wren",
+      "rating": 0,
+      "reason": "Woodland thickets and brush piles, feeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "House_Wren",
+      "rating": 0,
+      "reason": "Woodland edges and gardens, forages for insects on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Marsh_Wren",
+      "rating": 2,
+      "reason": "Cattail and reed marsh specialist, forages on insects in marsh vegetation",
+      "confidence": "high"
+     },
+     {
+      "species": "Rock_Wren",
+      "rating": 0,
+      "reason": "Rocky desert and canyon slopes, feeds on land",
+      "confidence": "high"
+     },
+     {
+      "species": "Winter_Wren",
+      "rating": 1,
+      "reason": "Forest floor near streams and wet woods, forages in streamside debris",
+      "confidence": "medium"
+     },
+     {
+      "species": "Common_Yellowthroat",
+      "rating": 2,
+      "reason": "Marsh and wet thicket specialist, forages in wet vegetation on land",
+      "confidence": "high"
+     }
+    ]
+   },
+   {
+    "key": "D",
+    "desc": "default model, habitat-first",
+    "ratings": [
+     {
+      "species": "Black_footed_Albatross",
+      "habitat": "Open North Pacific Ocean; feeds on surface squid and fish eggs; nests on sandy Hawaiian islets.",
+      "rating": 3,
+      "reason": "Pelagic seabird feeding from the ocean surface.",
+      "confidence": "high"
+     },
+     {
+      "species": "Laysan_Albatross",
+      "habitat": "Open North Pacific; feeds at night on surface squid; nests on Hawaiian islands.",
+      "rating": 3,
+      "reason": "Pelagic seabird spending most of life at sea.",
+      "confidence": "high"
+     },
+     {
+      "species": "Sooty_Albatross",
+      "habitat": "Southern Ocean open seas; feeds on squid and fish; nests on sub-Antarctic island cliffs.",
+      "rating": 3,
+      "reason": "Pelagic seabird feeding at sea.",
+      "confidence": "high"
+     },
+     {
+      "species": "Groove_billed_Ani",
+      "habitat": "Open scrub, pastures and brushy fields in warm lowlands; feeds on insects on ground; nests in shrubs.",
+      "rating": 0,
+      "reason": "Open terrestrial scrub and pasture bird.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Crested_Auklet",
+      "habitat": "Bering Sea and North Pacific waters; dives for zooplankton; nests in rock crevices on islands.",
+      "rating": 3,
+      "reason": "Diving seabird feeding on marine plankton.",
+      "confidence": "high"
+     },
+     {
+      "species": "Least_Auklet",
+      "habitat": "Bering Sea open water; dives for copepods; nests in talus crevices on islands.",
+      "rating": 3,
+      "reason": "Diving seabird living at sea.",
+      "confidence": "high"
+     },
+     {
+      "species": "Parakeet_Auklet",
+      "habitat": "North Pacific offshore waters; dives for jellyfish and plankton; nests in island cliff crevices.",
+      "rating": 3,
+      "reason": "Pelagic diving seabird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Rhinoceros_Auklet",
+      "habitat": "North Pacific coastal waters; dives for small fish; nests in burrows on islands.",
+      "rating": 3,
+      "reason": "Diving seabird catching fish underwater.",
+      "confidence": "high"
+     },
+     {
+      "species": "Brewer_Blackbird",
+      "habitat": "Open fields, wet meadows, towns, often near water; forages on ground; nests in shrubs or marsh edges.",
+      "rating": 1,
+      "reason": "Open-country bird often in moist meadows near water.",
+      "confidence": "low"
+     },
+     {
+      "species": "Red_winged_Blackbird",
+      "habitat": "Nests in cattail marshes and wet fields; forages in marsh vegetation and on land.",
+      "rating": 2,
+      "reason": "Marsh nester feeding mostly on land and vegetation.",
+      "confidence": "high"
+     },
+     {
+      "species": "Rusty_Blackbird",
+      "habitat": "Boreal bogs, beaver ponds; winters in swamps and flooded woods; forages on wet ground and shallows.",
+      "rating": 2,
+      "reason": "Wetland specialist feeding along water edges.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_headed_Blackbird",
+      "habitat": "Nests over deep-water marsh reeds; forages in marshes and nearby fields.",
+      "rating": 2,
+      "reason": "Marsh nester feeding in vegetation and fields.",
+      "confidence": "high"
+     },
+     {
+      "species": "Bobolink",
+      "habitat": "Tall grass prairie and hayfields; winters in South American grasslands and rice fields.",
+      "rating": 0,
+      "reason": "Grassland breeder without special water dependence.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Indigo_Bunting",
+      "habitat": "Brushy edges, old fields and woodland borders; feeds on seeds and insects; nests in shrubs.",
+      "rating": 0,
+      "reason": "Terrestrial edge and shrubland bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Lazuli_Bunting",
+      "habitat": "Brushy hillsides, shrubby draws and riparian thickets in the West; nests in shrubs.",
+      "rating": 0,
+      "reason": "Shrubland bird; water not essential.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Painted_Bunting",
+      "habitat": "Thickets, brushy edges and scrub in southern US; feeds on seeds; nests in shrubs.",
+      "rating": 0,
+      "reason": "Terrestrial thicket and scrub bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Cardinal",
+      "habitat": "Woodland edges, thickets, gardens; feeds on seeds on ground; nests in shrubs.",
+      "rating": 0,
+      "reason": "Terrestrial woodland edge and garden bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Spotted_Catbird",
+      "habitat": "Tropical rainforest in New Guinea and NE Australia; eats fruit; nests in trees.",
+      "rating": 0,
+      "reason": "Rainforest fruit-eater with no water tie.",
+      "confidence": "high"
+     },
+     {
+      "species": "Gray_Catbird",
+      "habitat": "Dense shrubby thickets and woodland edges, often moist or streamside; nests in shrubs.",
+      "rating": 1,
+      "reason": "Thicket bird often in damp streamside tangles.",
+      "confidence": "low"
+     },
+     {
+      "species": "Yellow_breasted_Chat",
+      "habitat": "Dense shrubby thickets, old fields; in West largely riparian thickets; nests low in shrubs.",
+      "rating": 1,
+      "reason": "Thicket bird, often riparian in western range.",
+      "confidence": "low"
+     },
+     {
+      "species": "Eastern_Towhee",
+      "habitat": "Forest undergrowth, brushy edges; scratches leaf litter for food; nests on or near ground.",
+      "rating": 0,
+      "reason": "Terrestrial undergrowth bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Chuck_will_Widow",
+      "habitat": "Pine and oak woodlands of southeastern US; hawks insects at night; nests on leaf litter.",
+      "rating": 0,
+      "reason": "Woodland nightjar with no water tie.",
+      "confidence": "high"
+     },
+     {
+      "species": "Brandt_Cormorant",
+      "habitat": "Pacific coastal marine waters; dives for fish; nests on rocky islands.",
+      "rating": 3,
+      "reason": "Marine diving fish-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_faced_Cormorant",
+      "habitat": "Bering Sea and Aleutian coasts; dives for fish; nests on sea cliffs.",
+      "rating": 3,
+      "reason": "Marine diving fish-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "Pelagic_Cormorant",
+      "habitat": "North Pacific rocky coasts; dives for fish and invertebrates; nests on sea cliffs.",
+      "rating": 3,
+      "reason": "Marine diving fish-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "Bronzed_Cowbird",
+      "habitat": "Open fields, pastures, towns in Texas to Central America; forages on ground; brood parasite.",
+      "rating": 0,
+      "reason": "Open-country ground feeder.",
+      "confidence": "high"
+     },
+     {
+      "species": "Shiny_Cowbird",
+      "habitat": "Open agricultural land, pastures and edges in South America and Caribbean; brood parasite.",
+      "rating": 0,
+      "reason": "Open-country ground feeder.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Brown_Creeper",
+      "habitat": "Mature forests; gleans insects from tree bark; nests behind loose bark.",
+      "rating": 0,
+      "reason": "Forest bark-gleaner.",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Crow",
+      "habitat": "Open woodland, farmland, towns; omnivorous ground forager; nests in trees.",
+      "rating": 0,
+      "reason": "Generalist of farmland and towns.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Fish_Crow",
+      "habitat": "Coastal areas, rivers, lakes and marshes in eastern US; scavenges along shores; nests in trees.",
+      "rating": 2,
+      "reason": "Closely tied to shores and rivers; feeds mostly on land.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Black_billed_Cuckoo",
+      "habitat": "Deciduous woodlands and thickets; eats caterpillars; nests in shrubs and trees.",
+      "rating": 0,
+      "reason": "Woodland caterpillar specialist.",
+      "confidence": "high"
+     },
+     {
+      "species": "Mangrove_Cuckoo",
+      "habitat": "Mangrove forests and coastal hammocks of Florida and Caribbean; gleans insects in foliage.",
+      "rating": 2,
+      "reason": "Mangrove specialist feeding in foliage.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_billed_Cuckoo",
+      "habitat": "Deciduous woodlands and thickets; riparian forests in West; eats caterpillars; nests in trees.",
+      "rating": 0,
+      "reason": "Woodland bird; riparian only in parts of range.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Gray_crowned_Rosy_Finch",
+      "habitat": "Alpine tundra, cliffs and snowfields; forages for seeds and insects on snow; nests in rock crevices.",
+      "rating": 0,
+      "reason": "Alpine mountain bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Purple_Finch",
+      "habitat": "Coniferous and mixed forests, feeders; eats seeds and buds; nests in conifers.",
+      "rating": 0,
+      "reason": "Forest seed-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "Northern_Flicker",
+      "habitat": "Open woodlands, parks, edges; feeds on ants on ground; nests in tree cavities.",
+      "rating": 0,
+      "reason": "Woodland and open-ground woodpecker.",
+      "confidence": "high"
+     },
+     {
+      "species": "Acadian_Flycatcher",
+      "habitat": "Mature deciduous forest along streams, ravines and swamps; nests over streams; sallies for insects.",
+      "rating": 1,
+      "reason": "Prefers streamside forest but feeds on insects in canopy.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Great_Crested_Flycatcher",
+      "habitat": "Deciduous woodlands and edges; catches insects in canopy; nests in tree cavities.",
+      "rating": 0,
+      "reason": "Woodland canopy flycatcher.",
+      "confidence": "high"
+     },
+     {
+      "species": "Least_Flycatcher",
+      "habitat": "Open deciduous woodlands and edges; sallies for insects; nests in trees.",
+      "rating": 0,
+      "reason": "Woodland flycatcher.",
+      "confidence": "high"
+     },
+     {
+      "species": "Olive_sided_Flycatcher",
+      "habitat": "Boreal and montane conifer forest openings, burns, bogs and pond edges; hawks insects from snags.",
+      "rating": 1,
+      "reason": "Often at bogs and beaver ponds but not dependent.",
+      "confidence": "low"
+     },
+     {
+      "species": "Scissor_tailed_Flycatcher",
+      "habitat": "Open grasslands, ranchland and roadsides of southern plains; hawks insects; nests in isolated trees.",
+      "rating": 0,
+      "reason": "Open grassland flycatcher.",
+      "confidence": "high"
+     },
+     {
+      "species": "Vermilion_Flycatcher",
+      "habitat": "Open arid areas, often near streams, ponds and riparian groves; hawks insects; nests in trees.",
+      "rating": 1,
+      "reason": "Frequently near water in arid open country.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Yellow_bellied_Flycatcher",
+      "habitat": "Wet boreal coniferous forests and spruce bogs; nests on mossy ground; winters in tropical forest.",
+      "rating": 1,
+      "reason": "Breeds in damp bogs but feeds on forest insects.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Frigatebird",
+      "habitat": "Tropical oceans and coasts; snatches fish from sea surface and pirates seabirds; nests on islands.",
+      "rating": 3,
+      "reason": "Takes food from sea surface; lives over ocean.",
+      "confidence": "high"
+     },
+     {
+      "species": "Northern_Fulmar",
+      "habitat": "Open North Atlantic and Pacific oceans; feeds on surface prey; nests on sea cliffs.",
+      "rating": 3,
+      "reason": "Pelagic seabird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Gadwall",
+      "habitat": "Freshwater marshes, ponds and lakes; dabbles for aquatic plants; nests near water.",
+      "rating": 3,
+      "reason": "Dabbling duck feeding in water.",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Goldfinch",
+      "habitat": "Weedy fields, edges and gardens; eats seeds; nests in shrubs.",
+      "rating": 0,
+      "reason": "Open field seed-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "European_Goldfinch",
+      "habitat": "Open woodland, gardens and weedy fields; eats thistle seeds; nests in trees.",
+      "rating": 0,
+      "reason": "Terrestrial seed-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "Boat_tailed_Grackle",
+      "habitat": "Coastal salt marshes and shores; forages on mud and in shallows and towns; nests in marsh vegetation.",
+      "rating": 2,
+      "reason": "Coastal marsh bird foraging along shores and land.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Eared_Grebe",
+      "habitat": "Saline and freshwater lakes; dives for brine shrimp and insects; nests on floating platforms.",
+      "rating": 3,
+      "reason": "Diving waterbird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Horned_Grebe",
+      "habitat": "Breeds on ponds and marshes; winters on coastal waters; dives for fish.",
+      "rating": 3,
+      "reason": "Diving waterbird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Pied_billed_Grebe",
+      "habitat": "Freshwater ponds and marshes; dives for fish and crayfish; nests on floating vegetation.",
+      "rating": 3,
+      "reason": "Diving waterbird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Grebe",
+      "habitat": "Large lakes and coastal bays; spears fish underwater; nests on floating platforms.",
+      "rating": 3,
+      "reason": "Diving fish-eater on open water.",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_Grosbeak",
+      "habitat": "Brushy fields, hedgerows and open woodland edges; eats seeds and insects; nests in shrubs.",
+      "rating": 0,
+      "reason": "Shrubby open-country bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Evening_Grosbeak",
+      "habitat": "Coniferous and mixed forests; eats seeds and buds; nests in trees.",
+      "rating": 0,
+      "reason": "Forest seed-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "Pine_Grosbeak",
+      "habitat": "Boreal and montane conifer forests; eats buds, seeds and fruit; nests in conifers.",
+      "rating": 0,
+      "reason": "Boreal forest bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Rose_breasted_Grosbeak",
+      "habitat": "Deciduous forests and edges; eats seeds, insects and fruit; nests in trees.",
+      "rating": 0,
+      "reason": "Woodland bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Pigeon_Guillemot",
+      "habitat": "Rocky North Pacific coasts; dives for bottom fish; nests in rock crevices.",
+      "rating": 3,
+      "reason": "Diving marine fish-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "California_Gull",
+      "habitat": "Breeds on interior lakes; winters on Pacific coast; eats brine shrimp, fish, insects in fields.",
+      "rating": 3,
+      "reason": "Lake and coastal gull feeding largely from water.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Glaucous_winged_Gull",
+      "habitat": "North Pacific coasts; feeds on fish and intertidal invertebrates; nests on islands.",
+      "rating": 3,
+      "reason": "Coastal gull feeding from water and shore.",
+      "confidence": "high"
+     },
+     {
+      "species": "Heermann_Gull",
+      "habitat": "Pacific coast; feeds on fish, often pirating pelicans; nests on Gulf of California islands.",
+      "rating": 3,
+      "reason": "Marine coastal gull.",
+      "confidence": "high"
+     },
+     {
+      "species": "Herring_Gull",
+      "habitat": "Coasts, lakes and rivers; omnivorous, takes fish and shore prey; nests on islands.",
+      "rating": 3,
+      "reason": "Coastal gull feeding from water and shore.",
+      "confidence": "high"
+     },
+     {
+      "species": "Ivory_Gull",
+      "habitat": "High Arctic pack ice; scavenges and takes fish at ice edges; nests on cliffs.",
+      "rating": 3,
+      "reason": "Arctic marine gull of pack ice.",
+      "confidence": "high"
+     },
+     {
+      "species": "Ring_billed_Gull",
+      "habitat": "Lakes, rivers, coasts and parking lots; eats fish, insects, refuse; nests on lake islands.",
+      "rating": 3,
+      "reason": "Water-associated gull, though often feeds inland.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Slaty_backed_Gull",
+      "habitat": "Northwest Pacific coasts; feeds on fish and marine invertebrates; nests on coastal cliffs.",
+      "rating": 3,
+      "reason": "Marine coastal gull.",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Gull",
+      "habitat": "Pacific coast; feeds on fish and intertidal prey; nests on offshore islands.",
+      "rating": 3,
+      "reason": "Marine coastal gull.",
+      "confidence": "high"
+     },
+     {
+      "species": "Anna_Hummingbird",
+      "habitat": "Chaparral, gardens and open woodland of Pacific coast; drinks nectar; nests in trees.",
+      "rating": 0,
+      "reason": "Terrestrial nectar-feeder.",
+      "confidence": "high"
+     },
+     {
+      "species": "Ruby_throated_Hummingbird",
+      "habitat": "Deciduous woodlands, gardens and edges; feeds on nectar and insects; nests on tree branches.",
+      "rating": 0,
+      "reason": "Terrestrial nectar-feeder.",
+      "confidence": "high"
+     },
+     {
+      "species": "Rufous_Hummingbird",
+      "habitat": "Conifer forest edges and mountain meadows; feeds on nectar; nests in trees.",
+      "rating": 0,
+      "reason": "Terrestrial nectar-feeder.",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_Violetear",
+      "habitat": "Montane forest edges and clearings in Neotropics; feeds on nectar; nests in shrubs.",
+      "rating": 0,
+      "reason": "Montane forest hummingbird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Long_tailed_Jaeger",
+      "habitat": "Breeds on Arctic tundra eating lemmings; spends rest of year far at sea.",
+      "rating": 3,
+      "reason": "Spends most of the year pelagic at sea.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Pomarine_Jaeger",
+      "habitat": "Breeds on Arctic tundra; winters on open ocean pirating seabirds.",
+      "rating": 3,
+      "reason": "Pelagic seabird outside breeding season.",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_Jay",
+      "habitat": "Deciduous and mixed forests, suburbs; eats acorns and seeds; nests in trees.",
+      "rating": 0,
+      "reason": "Woodland and suburban bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Florida_Jay",
+      "habitat": "Florida oak scrub on sandy ridges; eats acorns and insects; nests in scrub oaks.",
+      "rating": 0,
+      "reason": "Dry scrub specialist.",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_Jay",
+      "habitat": "Thorn scrub and woodland from south Texas to South America; omnivorous; nests in thickets.",
+      "rating": 0,
+      "reason": "Woodland and scrub bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Dark_eyed_Junco",
+      "habitat": "Coniferous and mixed forests, edges; forages for seeds on ground; nests on ground.",
+      "rating": 0,
+      "reason": "Forest ground-feeder.",
+      "confidence": "high"
+     },
+     {
+      "species": "Tropical_Kingbird",
+      "habitat": "Open country, edges and towns in tropics, often near water; hawks insects from perches.",
+      "rating": 1,
+      "reason": "Open-country flycatcher often perched near water.",
+      "confidence": "low"
+     },
+     {
+      "species": "Gray_Kingbird",
+      "habitat": "Coastal areas, mangroves and towns of Florida and Caribbean; hawks insects; nests in trees.",
+      "rating": 1,
+      "reason": "Often coastal and in mangroves but not water-dependent.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Belted_Kingfisher",
+      "habitat": "Rivers, lakes and coasts; plunge-dives for fish; nests in earthen bank burrows.",
+      "rating": 3,
+      "reason": "Plunge-diving fish-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_Kingfisher",
+      "habitat": "Clear streams and ponds from Texas to South America; dives for small fish; nests in banks.",
+      "rating": 3,
+      "reason": "Plunge-diving fish-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "Pied_Kingfisher",
+      "habitat": "Lakes, rivers and estuaries of Africa and Asia; hovers and dives for fish; nests in banks.",
+      "rating": 3,
+      "reason": "Hovering plunge-diver for fish.",
+      "confidence": "high"
+     },
+     {
+      "species": "Ringed_Kingfisher",
+      "habitat": "Rivers, lakes and mangroves of Neotropics; dives for fish; nests in earthen banks.",
+      "rating": 3,
+      "reason": "Plunge-diving fish-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "White_breasted_Kingfisher",
+      "habitat": "Open country, cultivation, gardens and water edges in Asia; eats insects, lizards, some fish.",
+      "rating": 1,
+      "reason": "Mostly hunts terrestrial prey, sometimes fish near water.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Red_legged_Kittiwake",
+      "habitat": "Bering Sea open waters; feeds on fish and squid at surface; nests on sea cliffs.",
+      "rating": 3,
+      "reason": "Pelagic surface-feeding gull.",
+      "confidence": "high"
+     },
+     {
+      "species": "Horned_Lark",
+      "habitat": "Bare open ground, prairies, deserts and fields; forages for seeds; nests on ground.",
+      "rating": 0,
+      "reason": "Open bare-ground bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Pacific_Loon",
+      "habitat": "Breeds on tundra lakes; winters on Pacific coastal waters; dives for fish.",
+      "rating": 3,
+      "reason": "Diving fish-eater on open water.",
+      "confidence": "high"
+     },
+     {
+      "species": "Mallard",
+      "habitat": "Ponds, marshes, lakes and rivers; dabbles for plants and invertebrates; nests near water.",
+      "rating": 3,
+      "reason": "Dabbling duck feeding in water.",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Meadowlark",
+      "habitat": "Grasslands, prairies and farm fields; forages on ground; nests in grass.",
+      "rating": 0,
+      "reason": "Grassland bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Hooded_Merganser",
+      "habitat": "Wooded ponds, rivers and swamps; dives for fish and crayfish; nests in tree cavities.",
+      "rating": 3,
+      "reason": "Diving fish-eating duck.",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_breasted_Merganser",
+      "habitat": "Breeds on northern lakes and rivers; winters on coastal bays; dives for fish.",
+      "rating": 3,
+      "reason": "Diving fish-eating duck.",
+      "confidence": "high"
+     },
+     {
+      "species": "Mockingbird",
+      "habitat": "Open areas with shrubs, suburbs and edges; forages on ground for insects; nests in shrubs.",
+      "rating": 0,
+      "reason": "Suburban and open-shrub bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Nighthawk",
+      "habitat": "Open areas, burns, grasslands and rooftops; hawks insects at dusk, often over water; nests on ground.",
+      "rating": 1,
+      "reason": "Open-country aerial feeder that often forages over water.",
+      "confidence": "low"
+     },
+     {
+      "species": "Clark_Nutcracker",
+      "habitat": "High-elevation western conifer forests; caches pine seeds; nests in conifers.",
+      "rating": 0,
+      "reason": "Montane conifer forest bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "White_breasted_Nuthatch",
+      "habitat": "Deciduous and mixed woodlands; forages on tree bark; nests in cavities.",
+      "rating": 0,
+      "reason": "Woodland bark-forager.",
+      "confidence": "high"
+     },
+     {
+      "species": "Baltimore_Oriole",
+      "habitat": "Open deciduous woodlands, riparian groves and parks; eats insects and nectar; hanging nests in trees.",
+      "rating": 0,
+      "reason": "Woodland canopy bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Hooded_Oriole",
+      "habitat": "Arid southwest palms, riparian woodland and suburbs; eats insects and nectar; nests in palms.",
+      "rating": 0,
+      "reason": "Arid woodland and suburban bird.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Orchard_Oriole",
+      "habitat": "Open woodland, orchards and edges, often near water; eats insects; nests in trees.",
+      "rating": 0,
+      "reason": "Open woodland bird; water not essential.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Scott_Oriole",
+      "habitat": "Desert grasslands, yucca and pinyon-juniper slopes; eats insects and nectar; nests in yuccas.",
+      "rating": 0,
+      "reason": "Desert scrub bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Ovenbird",
+      "habitat": "Mature deciduous forest floor; forages in leaf litter; dome nest on ground.",
+      "rating": 0,
+      "reason": "Forest-floor warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Brown_Pelican",
+      "habitat": "Coastal marine waters; plunge-dives for fish; nests on coastal islands.",
+      "rating": 3,
+      "reason": "Plunge-diving marine fish-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "White_Pelican",
+      "habitat": "Inland lakes and marshes; scoops fish while swimming; nests on lake islands.",
+      "rating": 3,
+      "reason": "Swimming fish-eater on open water.",
+      "confidence": "high"
+     },
+     {
+      "species": "Western_Wood_Pewee",
+      "habitat": "Open western forests, riparian woodland and edges; sallies for insects; nests on branches.",
+      "rating": 0,
+      "reason": "Woodland flycatcher.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Sayornis",
+      "habitat": "Phoebes: open areas near streams, bridges and buildings; Black Phoebe near water, Say's arid; hawk insects.",
+      "rating": 1,
+      "reason": "Eastern and Black phoebes often near water; not dependent.",
+      "confidence": "medium"
+     },
+     {
+      "species": "American_Pipit",
+      "habitat": "Breeds on alpine and Arctic tundra; winters on shores, mudflats and bare fields; forages on ground.",
+      "rating": 1,
+      "reason": "Often forages along shores and wet fields.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Whip_poor_Will",
+      "habitat": "Dry deciduous and mixed forests with open understory; hawks moths at night; nests on leaf litter.",
+      "rating": 0,
+      "reason": "Woodland nightjar.",
+      "confidence": "high"
+     },
+     {
+      "species": "Horned_Puffin",
+      "habitat": "North Pacific open waters; dives for fish; nests in cliff crevices on islands.",
+      "rating": 3,
+      "reason": "Diving pelagic seabird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Common_Raven",
+      "habitat": "Mountains, deserts, forests and coasts; omnivorous scavenger; nests on cliffs or trees.",
+      "rating": 0,
+      "reason": "Generalist of mountains, forests and deserts.",
+      "confidence": "high"
+     },
+     {
+      "species": "White_necked_Raven",
+      "habitat": "Mountainous and open country of eastern and southern Africa; scavenges; nests on cliffs.",
+      "rating": 0,
+      "reason": "Mountain and open-country corvid.",
+      "confidence": "high"
+     },
+     {
+      "species": "American_Redstart",
+      "habitat": "Second-growth deciduous woodlands; flycatches insects in foliage; nests in trees.",
+      "rating": 0,
+      "reason": "Woodland warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Geococcyx",
+      "habitat": "Roadrunners: deserts, arid scrub and open country; run down lizards and insects; nest in shrubs.",
+      "rating": 0,
+      "reason": "Desert and scrub ground-hunters.",
+      "confidence": "high"
+     },
+     {
+      "species": "Loggerhead_Shrike",
+      "habitat": "Open grasslands, pastures with scattered shrubs; hunts insects and small vertebrates; nests in shrubs.",
+      "rating": 0,
+      "reason": "Open-country predator.",
+      "confidence": "high"
+     },
+     {
+      "species": "Great_Grey_Shrike",
+      "habitat": "Open country with scattered trees, heath, taiga edges; hunts voles and insects; nests in trees.",
+      "rating": 0,
+      "reason": "Open-country predator.",
+      "confidence": "high"
+     },
+     {
+      "species": "Baird_Sparrow",
+      "habitat": "Native mixed-grass prairie of northern plains; forages on ground; nests in grass.",
+      "rating": 0,
+      "reason": "Grassland specialist.",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_throated_Sparrow",
+      "habitat": "Desert scrub and arid hillsides of Southwest; eats seeds and insects; nests in shrubs.",
+      "rating": 0,
+      "reason": "Desert scrub bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Brewer_Sparrow",
+      "habitat": "Sagebrush shrubland of western interior; forages on ground; nests in sagebrush.",
+      "rating": 0,
+      "reason": "Sagebrush specialist.",
+      "confidence": "high"
+     },
+     {
+      "species": "Chipping_Sparrow",
+      "habitat": "Open woodland, parks and lawns; feeds on seeds on ground; nests in conifers.",
+      "rating": 0,
+      "reason": "Open woodland and suburban bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Clay_colored_Sparrow",
+      "habitat": "Shrubby prairies and brushy fields of northern plains; forages on ground; nests in shrubs.",
+      "rating": 0,
+      "reason": "Shrubby grassland bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "House_Sparrow",
+      "habitat": "Towns, farms and cities; eats seeds and scraps; nests in building cavities.",
+      "rating": 0,
+      "reason": "Urban and farmland bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Field_Sparrow",
+      "habitat": "Old fields, brushy pastures and edges; feeds on seeds; nests low in shrubs.",
+      "rating": 0,
+      "reason": "Brushy field bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Fox_Sparrow",
+      "habitat": "Dense thickets and conifer undergrowth; scratches leaf litter; nests on ground or shrubs.",
+      "rating": 0,
+      "reason": "Thicket and undergrowth bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Grasshopper_Sparrow",
+      "habitat": "Short grasslands, prairies and hayfields; eats insects and seeds; nests on ground.",
+      "rating": 0,
+      "reason": "Grassland specialist.",
+      "confidence": "high"
+     },
+     {
+      "species": "Harris_Sparrow",
+      "habitat": "Breeds at taiga-tundra edge; winters in brushy fields of central plains; forages on ground.",
+      "rating": 0,
+      "reason": "Shrub and brushy field bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Henslow_Sparrow",
+      "habitat": "Tall dense grasslands, often damp; winters in wet pine savannas; nests on ground.",
+      "rating": 1,
+      "reason": "Grassland bird often in damp meadows.",
+      "confidence": "low"
+     },
+     {
+      "species": "Le_Conte_Sparrow",
+      "habitat": "Wet sedge meadows, bog and marsh edges; winters in damp grassy fields; nests on ground.",
+      "rating": 2,
+      "reason": "Wet meadow and marsh-edge specialist feeding on land.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Lincoln_Sparrow",
+      "habitat": "Breeds in boreal bogs, wet willow thickets and montane meadows; winters in brushy areas.",
+      "rating": 1,
+      "reason": "Wet breeding habitat but feeds on land; dry in winter.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Nelson_Sharp_tailed_Sparrow",
+      "habitat": "Freshwater and salt marshes, wet meadows; forages in marsh grasses; nests in marsh.",
+      "rating": 2,
+      "reason": "Marsh specialist feeding in vegetation.",
+      "confidence": "high"
+     },
+     {
+      "species": "Savannah_Sparrow",
+      "habitat": "Open grasslands, fields, dunes and salt-marsh edges; forages on ground; nests in grass.",
+      "rating": 0,
+      "reason": "Mostly grassland and field bird.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Seaside_Sparrow",
+      "habitat": "Coastal salt marshes; forages on mud for invertebrates and crabs; nests in marsh grass.",
+      "rating": 2,
+      "reason": "Salt-marsh specialist feeding on marsh mud.",
+      "confidence": "high"
+     },
+     {
+      "species": "Song_Sparrow",
+      "habitat": "Brushy edges, marsh borders and streamside thickets; forages on ground; nests in shrubs.",
+      "rating": 1,
+      "reason": "Often in damp habitats near water.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Tree_Sparrow",
+      "habitat": "Breeds in tundra-edge willow scrub; winters in weedy fields and hedgerows; forages on ground.",
+      "rating": 0,
+      "reason": "Shrub and field bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Vesper_Sparrow",
+      "habitat": "Open grasslands, farmland and sagebrush; forages on ground; nests on ground.",
+      "rating": 0,
+      "reason": "Open grassland bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "White_crowned_Sparrow",
+      "habitat": "Shrubby tundra, mountain meadows and brushy fields; forages on ground; nests in shrubs.",
+      "rating": 0,
+      "reason": "Shrubland ground-feeder.",
+      "confidence": "high"
+     },
+     {
+      "species": "White_throated_Sparrow",
+      "habitat": "Coniferous and mixed forest undergrowth; forages in leaf litter; nests on ground.",
+      "rating": 0,
+      "reason": "Forest undergrowth bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Cape_Glossy_Starling",
+      "habitat": "Savanna, open woodland and gardens of southern Africa; eats fruit and insects; nests in cavities.",
+      "rating": 0,
+      "reason": "Savanna and woodland bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Bank_Swallow",
+      "habitat": "Nests in colonies in riverbanks and sand banks; forages for insects over water and fields.",
+      "rating": 2,
+      "reason": "Nests in riverbanks; feeds in the air.",
+      "confidence": "high"
+     },
+     {
+      "species": "Barn_Swallow",
+      "habitat": "Open fields, farms and water bodies; hawks insects low over fields and water; nests on buildings.",
+      "rating": 1,
+      "reason": "Often forages over water but not dependent.",
+      "confidence": "high"
+     },
+     {
+      "species": "Cliff_Swallow",
+      "habitat": "Open country near water; builds mud nests on cliffs and bridges; hawks insects.",
+      "rating": 1,
+      "reason": "Needs mud for nests and often over water.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Tree_Swallow",
+      "habitat": "Wetlands, ponds, beaver swamps and fields; hawks insects over water; nests in cavities.",
+      "rating": 2,
+      "reason": "Strongly tied to wetlands; feeds in the air.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Scarlet_Tanager",
+      "habitat": "Mature deciduous forest canopy; eats insects; nests in trees.",
+      "rating": 0,
+      "reason": "Forest canopy bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Summer_Tanager",
+      "habitat": "Open deciduous and pine-oak woodlands; eats bees and wasps; nests in trees.",
+      "rating": 0,
+      "reason": "Woodland bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Artic_Tern",
+      "habitat": "Breeds on Arctic coasts and tundra; migrates over oceans; plunge-dives for small fish.",
+      "rating": 3,
+      "reason": "Plunge-diving seabird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_Tern",
+      "habitat": "Breeds in freshwater marshes; winters at sea; dips insects and fish from water surface.",
+      "rating": 3,
+      "reason": "Snatches food from water surface; marsh and sea.",
+      "confidence": "high"
+     },
+     {
+      "species": "Caspian_Tern",
+      "habitat": "Coasts, lakes and rivers; plunge-dives for fish; nests on islands and beaches.",
+      "rating": 3,
+      "reason": "Plunge-diving fish-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "Common_Tern",
+      "habitat": "Coasts and large lakes; plunge-dives for small fish; nests on islands and beaches.",
+      "rating": 3,
+      "reason": "Plunge-diving fish-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "Elegant_Tern",
+      "habitat": "Pacific coastal waters; plunge-dives for anchovies; nests on islands.",
+      "rating": 3,
+      "reason": "Marine plunge-diver.",
+      "confidence": "high"
+     },
+     {
+      "species": "Forsters_Tern",
+      "habitat": "Marshes, lakes and coastal waters; plunge-dives for fish; nests in marshes.",
+      "rating": 3,
+      "reason": "Plunge-diving marsh tern.",
+      "confidence": "high"
+     },
+     {
+      "species": "Least_Tern",
+      "habitat": "Beaches, sandbars and rivers; plunge-dives for small fish; nests on bare sand.",
+      "rating": 3,
+      "reason": "Plunge-diving fish-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "Green_tailed_Towhee",
+      "habitat": "Montane shrublands and sagebrush; scratches for seeds on ground; nests in shrubs.",
+      "rating": 0,
+      "reason": "Montane shrubland bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Brown_Thrasher",
+      "habitat": "Thickets, hedgerows and woodland edges; forages in leaf litter; nests in shrubs.",
+      "rating": 0,
+      "reason": "Thicket ground-forager.",
+      "confidence": "high"
+     },
+     {
+      "species": "Sage_Thrasher",
+      "habitat": "Sagebrush shrub-steppe of the West; forages on ground for insects; nests in sagebrush.",
+      "rating": 0,
+      "reason": "Sagebrush specialist.",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_capped_Vireo",
+      "habitat": "Shrubby oak scrub in Texas and Oklahoma; gleans insects; nests in low shrubs.",
+      "rating": 0,
+      "reason": "Dry scrub specialist.",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_headed_Vireo",
+      "habitat": "Mixed and coniferous forests; gleans insects from foliage; nests in trees.",
+      "rating": 0,
+      "reason": "Forest foliage-gleaner.",
+      "confidence": "high"
+     },
+     {
+      "species": "Philadelphia_Vireo",
+      "habitat": "Deciduous second-growth forests and edges in boreal zone; gleans insects; nests in trees.",
+      "rating": 0,
+      "reason": "Woodland foliage-gleaner.",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_eyed_Vireo",
+      "habitat": "Deciduous forest canopy; gleans caterpillars; nests in tree forks.",
+      "rating": 0,
+      "reason": "Forest canopy bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Warbling_Vireo",
+      "habitat": "Riparian cottonwoods and willows, open deciduous woods; gleans insects; nests in trees.",
+      "rating": 1,
+      "reason": "Often in riparian trees along rivers.",
+      "confidence": "medium"
+     },
+     {
+      "species": "White_eyed_Vireo",
+      "habitat": "Dense shrubby thickets and second growth; gleans insects; nests in shrubs.",
+      "rating": 0,
+      "reason": "Thicket bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Yellow_throated_Vireo",
+      "habitat": "Open deciduous forests and edges; gleans insects in canopy; nests in trees.",
+      "rating": 0,
+      "reason": "Woodland canopy bird.",
+      "confidence": "high"
+     },
+     {
+      "species": "Bay_breasted_Warbler",
+      "habitat": "Boreal spruce-fir forests; eats spruce budworm; nests in conifers.",
+      "rating": 0,
+      "reason": "Boreal forest warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_and_white_Warbler",
+      "habitat": "Deciduous and mixed forests; creeps on trunks for insects; nests on ground.",
+      "rating": 0,
+      "reason": "Forest bark-forager.",
+      "confidence": "high"
+     },
+     {
+      "species": "Black_throated_Blue_Warbler",
+      "habitat": "Mature deciduous and mixed forests with dense understory; gleans insects; nests in shrubs.",
+      "rating": 0,
+      "reason": "Forest understory warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Blue_winged_Warbler",
+      "habitat": "Shrubby old fields and forest edges; gleans insects; nests on ground.",
+      "rating": 0,
+      "reason": "Shrubby edge warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Canada_Warbler",
+      "habitat": "Moist forest understory, often near streams, swamps and bogs; flycatches insects; nests on ground.",
+      "rating": 1,
+      "reason": "Prefers damp forest near water but feeds in foliage.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Cape_May_Warbler",
+      "habitat": "Boreal spruce forests; eats budworm and nectar; nests in conifers.",
+      "rating": 0,
+      "reason": "Boreal forest warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Cerulean_Warbler",
+      "habitat": "Mature deciduous forest canopy; gleans insects; nests high in trees.",
+      "rating": 0,
+      "reason": "Forest canopy warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Chestnut_sided_Warbler",
+      "habitat": "Shrubby second growth and young forest; gleans insects; nests in shrubs.",
+      "rating": 0,
+      "reason": "Second-growth shrubland warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Golden_winged_Warbler",
+      "habitat": "Early successional shrubland and forest edges; gleans insects; nests on ground.",
+      "rating": 0,
+      "reason": "Shrubby edge warbler.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Hooded_Warbler",
+      "habitat": "Mature deciduous forest with dense understory; flycatches insects; nests in shrubs.",
+      "rating": 0,
+      "reason": "Forest understory warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Kentucky_Warbler",
+      "habitat": "Moist deciduous forest floor and understory; forages in leaf litter; nests on ground.",
+      "rating": 0,
+      "reason": "Forest-floor warbler.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Magnolia_Warbler",
+      "habitat": "Young dense conifer forests; gleans insects; nests in small conifers.",
+      "rating": 0,
+      "reason": "Conifer forest warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Mourning_Warbler",
+      "habitat": "Dense shrubby clearings and regenerating forest; forages low; nests on ground.",
+      "rating": 0,
+      "reason": "Shrubby clearing warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Myrtle_Warbler",
+      "habitat": "Coniferous forests; winters in thickets, coastal wax myrtle and woodlands; eats insects and berries.",
+      "rating": 0,
+      "reason": "Forest and thicket warbler.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Nashville_Warbler",
+      "habitat": "Second-growth woods, bog edges and shrubby clearings; gleans insects; nests on ground.",
+      "rating": 0,
+      "reason": "Second-growth woodland warbler.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Orange_crowned_Warbler",
+      "habitat": "Shrubby woodland edges and chaparral; gleans insects; nests on ground or in shrubs.",
+      "rating": 0,
+      "reason": "Shrubland warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Palm_Warbler",
+      "habitat": "Breeds in boreal bogs and fens; winters in open areas and fields; forages on ground.",
+      "rating": 1,
+      "reason": "Bog breeder, but forages on land in open areas.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Pine_Warbler",
+      "habitat": "Pine forests of eastern US; gleans insects and seeds; nests in pines.",
+      "rating": 0,
+      "reason": "Pine forest warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Prairie_Warbler",
+      "habitat": "Shrubby old fields, young pines and scrub; gleans insects; nests in shrubs.",
+      "rating": 0,
+      "reason": "Scrubland warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Prothonotary_Warbler",
+      "habitat": "Flooded bottomland forests and wooded swamps; gleans insects; nests in cavities over water.",
+      "rating": 2,
+      "reason": "Swamp specialist feeding in vegetation.",
+      "confidence": "high"
+     },
+     {
+      "species": "Swainson_Warbler",
+      "habitat": "Bottomland swamp forests, canebrakes and Appalachian rhododendron thickets; forages in leaf litter.",
+      "rating": 1,
+      "reason": "Often in swampy bottomlands but forages in litter.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Tennessee_Warbler",
+      "habitat": "Boreal forest openings and edges; gleans insects; nests on ground.",
+      "rating": 0,
+      "reason": "Boreal forest warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Wilson_Warbler",
+      "habitat": "Wet willow and alder thickets along streams and bogs; flycatches insects; nests on ground.",
+      "rating": 1,
+      "reason": "Prefers damp streamside thickets but not dependent.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Worm_eating_Warbler",
+      "habitat": "Deciduous forest hillsides with dense understory; probes dead leaves; nests on ground.",
+      "rating": 0,
+      "reason": "Forest understory warbler.",
+      "confidence": "high"
+     },
+     {
+      "species": "Yellow_Warbler",
+      "habitat": "Wet willow thickets, riparian shrubs and edges; gleans insects; nests in shrubs.",
+      "rating": 1,
+      "reason": "Often in riparian and wet thickets.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Northern_Waterthrush",
+      "habitat": "Wooded swamps, bogs and pond edges; forages at water's edge for invertebrates; nests in root tangles.",
+      "rating": 2,
+      "reason": "Swamp and bog specialist foraging along water edges.",
+      "confidence": "medium"
+     },
+     {
+      "species": "Louisiana_Waterthrush",
+      "habitat": "Clear forested streams; wades picking aquatic insects from stream rocks; nests in stream banks.",
+      "rating": 3,
+      "reason": "Takes aquatic insects from streams by wading.",
+      "confidence": "low"
+     },
+     {
+      "species": "Bohemian_Waxwing",
+      "habitat": "Boreal forest; winters wandering to fruiting trees in towns; eats berries; nests in conifers.",
+      "rating": 0,
+      "reason": "Boreal forest fruit-eater.",
+      "confidence": "high"
+     },
+     {
+      "species": "Cedar_Waxwing",
+      "habitat": "Open woodlands, orchards and riparian trees; eats berries, flycatches insects over streams; nests in trees.",
+      "rating": 1,
+      "reason": "Often sallies for insects over water.",
+      "confidence": "low"
+     },
+     {
+      "species": "American_Three_toed_Woodpecker",
+      "habitat": "Boreal and montane conifer forests, burns; flakes bark for beetle larvae; nests in cavities.",
+      "rating": 0,
+      "reason": "Conifer forest woodpecker.",
+      "confidence": "high"
+     },
+     {
+      "species": "Pileated_Woodpecker",
+      "habitat": "Mature forests with large trees; excavates for carpenter ants; nests in cavities.",
+      "rating": 0,
+      "reason": "Mature forest woodpecker.",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_bellied_Woodpecker",
+      "habitat": "Deciduous woodlands and suburbs; forages on trunks; nests in cavities.",
+      "rating": 0,
+      "reason": "Woodland woodpecker.",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_cockaded_Woodpecker",
+      "habitat": "Open mature longleaf pine forests of southeastern US; nests in living pine cavities.",
+      "rating": 0,
+      "reason": "Pine forest specialist.",
+      "confidence": "high"
+     },
+     {
+      "species": "Red_headed_Woodpecker",
+      "habitat": "Open woodlands, savannas and groves with dead trees; flycatches and caches nuts; nests in cavities.",
+      "rating": 0,
+      "reason": "Open woodland woodpecker.",
+      "confidence": "high"
+     },
+     {
+      "species": "Downy_Woodpecker",
+      "habitat": "Deciduous woodlands, parks and suburbs; forages on bark; nests in cavities.",
+      "rating": 0,
+      "reason": "Woodland woodpecker.",
+      "confidence": "high"
+     },
+     {
+      "species": "Bewick_Wren",
+      "habitat": "Brushy scrub, chaparral and open woodland; gleans insects; nests in cavities.",
+      "rating": 0,
+      "reason": "Scrubland wren.",
+      "confidence": "high"
+     },
+     {
+      "species": "Cactus_Wren",
+      "habitat": "Desert scrub with cholla and saguaro; forages on ground for insects; nests in cacti.",
+      "rating": 0,
+      "reason": "Desert specialist.",
+      "confidence": "high"
+     },
+     {
+      "species": "Carolina_Wren",
+      "habitat": "Dense woodland undergrowth and suburban thickets; forages for insects; nests in cavities.",
+      "rating": 0,
+      "reason": "Woodland thicket wren.",
+      "confidence": "high"
+     },
+     {
+      "species": "House_Wren",
+      "habitat": "Open woodland, edges and gardens; gleans insects; nests in cavities and nest boxes.",
+      "rating": 0,
+      "reason": "Woodland edge and garden wren.",
+      "confidence": "high"
+     },
+     {
+      "species": "Marsh_Wren",
+      "habitat": "Cattail and bulrush marshes; gleans insects from reeds; nests woven in marsh vegetation.",
+      "rating": 2,
+      "reason": "Marsh specialist feeding in vegetation.",
+      "confidence": "high"
+     },
+     {
+      "species": "Rock_Wren",
+      "habitat": "Arid rocky slopes, talus and canyons; forages among rocks; nests in crevices.",
+      "rating": 0,
+      "reason": "Arid rocky habitat wren.",
+      "confidence": "high"
+     },
+     {
+      "species": "Winter_Wren",
+      "habitat": "Moist coniferous forest undergrowth, often near streams and fallen logs; nests in root tangles.",
+      "rating": 1,
+      "reason": "Damp forest floor bird, often streamside.",
+      "confidence": "low"
+     },
+     {
+      "species": "Common_Yellowthroat",
+      "habitat": "Marshes, wet thickets and damp brushy fields; gleans insects low in vegetation; nests near ground.",
+      "rating": 2,
+      "reason": "Mainly marsh and wet thicket bird feeding in vegetation.",
+      "confidence": "medium"
+     }
+    ]
+   }
+  ],
+  "final": [
+   {
+    "species": "Black_footed_Albatross",
+    "rating": 3,
+    "reason": "Pelagic seabird feeding on squid and fish from the ocean surface",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Laysan_Albatross",
+    "rating": 3,
+    "reason": "Pelagic seabird spending most of life at sea, feeds from surface",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Sooty_Albatross",
+    "rating": 3,
+    "reason": "Southern Ocean pelagic seabird feeding at sea",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Groove_billed_Ani",
+    "rating": 0,
+    "reason": "Open brushy scrub and pastures; insects caught on land",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Crested_Auklet",
+    "rating": 3,
+    "reason": "Diving seabird feeding on marine plankton",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Least_Auklet",
+    "rating": 3,
+    "reason": "Diving seabird feeding on zooplankton at sea",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Parakeet_Auklet",
+    "rating": 3,
+    "reason": "Diving alcid feeding on marine invertebrates at sea",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Rhinoceros_Auklet",
+    "rating": 3,
+    "reason": "Diving seabird catching fish at sea",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Brewer_Blackbird",
+    "rating": 1,
+    "reason": "Open fields and towns, often forages near water edges",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Red_winged_Blackbird",
+    "rating": 2,
+    "reason": "Nests in marshes but feeds on seeds and insects on land",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Rusty_Blackbird",
+    "rating": 2,
+    "reason": "Wooded swamps and bogs; forages on wet ground and shallow edges",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Yellow_headed_Blackbird",
+    "rating": 2,
+    "reason": "Nests over water in marshes, feeds largely in fields",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Bobolink",
+    "rating": 0,
+    "reason": "Grassland and hayfield breeder",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Indigo_Bunting",
+    "rating": 0,
+    "reason": "Brushy edges and woodland clearings",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Lazuli_Bunting",
+    "rating": 0,
+    "reason": "Brushy hillsides and shrubby areas",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Painted_Bunting",
+    "rating": 0,
+    "reason": "Thickets, brushy edges and scrub",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Cardinal",
+    "rating": 0,
+    "reason": "Woodland edges, thickets and gardens",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Spotted_Catbird",
+    "rating": 0,
+    "reason": "Tropical rainforest fruit-eater",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Gray_Catbird",
+    "rating": 1,
+    "reason": "Dense thickets, frequently moist streamside tangles; not water-dependent",
+    "source": "adjudicated",
+    "n_agree": 0
+   },
+   {
+    "species": "Yellow_breasted_Chat",
+    "rating": 1,
+    "reason": "Shrubby thickets, largely riparian in West; feeds in vegetation",
+    "source": "adjudicated",
+    "n_agree": 0
+   },
+   {
+    "species": "Eastern_Towhee",
+    "rating": 0,
+    "reason": "Forest understory and thickets, forages in leaf litter",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Chuck_will_Widow",
+    "rating": 0,
+    "reason": "Nightjar of pine and oak woodlands",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Brandt_Cormorant",
+    "rating": 3,
+    "reason": "Marine diving cormorant catching fish",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Red_faced_Cormorant",
+    "rating": 3,
+    "reason": "Marine diving cormorant of North Pacific coasts",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Pelagic_Cormorant",
+    "rating": 3,
+    "reason": "Coastal marine diver feeding on fish",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Bronzed_Cowbird",
+    "rating": 0,
+    "reason": "Open country, fields and towns",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Shiny_Cowbird",
+    "rating": 0,
+    "reason": "Open country and agricultural land",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Brown_Creeper",
+    "rating": 0,
+    "reason": "Forest bird foraging on tree bark",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "American_Crow",
+    "rating": 0,
+    "reason": "Generalist of fields, woods and towns",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Fish_Crow",
+    "rating": 2,
+    "reason": "Coastal, tidewater and riverine habitats; scavenges along shores",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Black_billed_Cuckoo",
+    "rating": 0,
+    "reason": "Woodlands and thickets, eats caterpillars",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Mangrove_Cuckoo",
+    "rating": 2,
+    "reason": "Lives in mangroves, feeds on insects in foliage",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Yellow_billed_Cuckoo",
+    "rating": 0,
+    "reason": "Deciduous woodland; riparian in West but feeds in foliage",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Gray_crowned_Rosy_Finch",
+    "rating": 0,
+    "reason": "Alpine and tundra, forages on snowfields and rocks",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Purple_Finch",
+    "rating": 0,
+    "reason": "Coniferous and mixed forests",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Northern_Flicker",
+    "rating": 0,
+    "reason": "Open woodlands, feeds on ground ants",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Acadian_Flycatcher",
+    "rating": 1,
+    "reason": "Moist forests, often along streams and ravines",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Great_Crested_Flycatcher",
+    "rating": 0,
+    "reason": "Deciduous woodland canopy",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Least_Flycatcher",
+    "rating": 0,
+    "reason": "Deciduous and mixed woodlands",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Olive_sided_Flycatcher",
+    "rating": 1,
+    "reason": "Conifer edges, often at bogs and beaver ponds; not water-dependent",
+    "source": "adjudicated",
+    "n_agree": 0
+   },
+   {
+    "species": "Scissor_tailed_Flycatcher",
+    "rating": 0,
+    "reason": "Open grassland and savanna with scattered trees",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Vermilion_Flycatcher",
+    "rating": 1,
+    "reason": "Arid open areas, usually near water",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Yellow_bellied_Flycatcher",
+    "rating": 1,
+    "reason": "Boreal bogs and wet coniferous forest",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Frigatebird",
+    "rating": 3,
+    "reason": "Oceanic seabird snatching fish from sea surface",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Northern_Fulmar",
+    "rating": 3,
+    "reason": "Pelagic seabird feeding at ocean surface",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Gadwall",
+    "rating": 3,
+    "reason": "Dabbling duck feeding on aquatic plants",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "American_Goldfinch",
+    "rating": 0,
+    "reason": "Weedy fields and open areas, seed eater",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "European_Goldfinch",
+    "rating": 0,
+    "reason": "Open woodland, fields and gardens",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Boat_tailed_Grackle",
+    "rating": 2,
+    "reason": "Coastal marshes; forages on ground and shallow edges",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Eared_Grebe",
+    "rating": 3,
+    "reason": "Diving waterbird of lakes and saline waters",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Horned_Grebe",
+    "rating": 3,
+    "reason": "Diving grebe of ponds and coastal waters",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Pied_billed_Grebe",
+    "rating": 3,
+    "reason": "Diving grebe of freshwater marshes and ponds",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Western_Grebe",
+    "rating": 3,
+    "reason": "Diving fish-eater on lakes and coastal bays",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Blue_Grosbeak",
+    "rating": 0,
+    "reason": "Brushy fields and overgrown edges",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Evening_Grosbeak",
+    "rating": 0,
+    "reason": "Coniferous and mixed forests",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Pine_Grosbeak",
+    "rating": 0,
+    "reason": "Boreal coniferous forest",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Rose_breasted_Grosbeak",
+    "rating": 0,
+    "reason": "Deciduous woodland and edges",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Pigeon_Guillemot",
+    "rating": 3,
+    "reason": "Coastal diving alcid feeding on fish",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "California_Gull",
+    "rating": 3,
+    "reason": "Gull of inland lakes and coasts, feeds from water",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Glaucous_winged_Gull",
+    "rating": 3,
+    "reason": "Coastal marine gull feeding at sea and shore",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Heermann_Gull",
+    "rating": 3,
+    "reason": "Coastal gull feeding on fish at sea",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Herring_Gull",
+    "rating": 3,
+    "reason": "Coastal and lake gull feeding from water and shores",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Ivory_Gull",
+    "rating": 3,
+    "reason": "High Arctic gull of pack ice and open sea",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Ring_billed_Gull",
+    "rating": 3,
+    "reason": "Gull of lakes and coasts, though often forages on land",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Slaty_backed_Gull",
+    "rating": 3,
+    "reason": "Coastal marine gull of the North Pacific",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Western_Gull",
+    "rating": 3,
+    "reason": "Strictly coastal marine gull",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Anna_Hummingbird",
+    "rating": 0,
+    "reason": "Chaparral, gardens and open woodland",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Ruby_throated_Hummingbird",
+    "rating": 0,
+    "reason": "Woodland edges and gardens, nectar feeder",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Rufous_Hummingbird",
+    "rating": 0,
+    "reason": "Forest edges and mountain meadows",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Green_Violetear",
+    "rating": 0,
+    "reason": "Montane forest and edges, nectar feeder",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Long_tailed_Jaeger",
+    "rating": 3,
+    "reason": "Pelagic outside breeding season; breeds on tundra",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Pomarine_Jaeger",
+    "rating": 3,
+    "reason": "Pelagic seabird, kleptoparasite at sea",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Blue_Jay",
+    "rating": 0,
+    "reason": "Oak and mixed forests, towns",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Florida_Jay",
+    "rating": 0,
+    "reason": "Dry oak scrub specialist",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Green_Jay",
+    "rating": 0,
+    "reason": "Thorn scrub and tropical woodland",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Dark_eyed_Junco",
+    "rating": 0,
+    "reason": "Coniferous forest and open woodland, ground forager",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Tropical_Kingbird",
+    "rating": 1,
+    "reason": "Open areas and edges, often near water",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Gray_Kingbird",
+    "rating": 1,
+    "reason": "Coastal mangroves and shores, hawks insects",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Belted_Kingfisher",
+    "rating": 3,
+    "reason": "Plunge-dives for fish in streams and lakes",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Green_Kingfisher",
+    "rating": 3,
+    "reason": "Plunge-dives for small fish in streams",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Pied_Kingfisher",
+    "rating": 3,
+    "reason": "Hovers and plunge-dives for fish",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Ringed_Kingfisher",
+    "rating": 3,
+    "reason": "Plunge-diving fish-eater of rivers and lakes",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "White_breasted_Kingfisher",
+    "rating": 1,
+    "reason": "Often far from water, eats insects and lizards, some fish",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Red_legged_Kittiwake",
+    "rating": 3,
+    "reason": "Pelagic gull feeding at the sea surface",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Horned_Lark",
+    "rating": 0,
+    "reason": "Barren open ground, fields and tundra",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Pacific_Loon",
+    "rating": 3,
+    "reason": "Diving fish-eater on lakes and at sea",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Mallard",
+    "rating": 3,
+    "reason": "Dabbling duck of ponds and wetlands",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Western_Meadowlark",
+    "rating": 0,
+    "reason": "Grasslands and open fields",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Hooded_Merganser",
+    "rating": 3,
+    "reason": "Diving duck catching fish and invertebrates",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Red_breasted_Merganser",
+    "rating": 3,
+    "reason": "Diving fish-eating duck of coastal waters",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Mockingbird",
+    "rating": 0,
+    "reason": "Open areas, towns and scrub",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Nighthawk",
+    "rating": 1,
+    "reason": "Open-country aerial insectivore that regularly hawks insects over water",
+    "source": "adjudicated",
+    "n_agree": 0
+   },
+   {
+    "species": "Clark_Nutcracker",
+    "rating": 0,
+    "reason": "Montane conifer forest, pine seed cacher",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "White_breasted_Nuthatch",
+    "rating": 0,
+    "reason": "Deciduous woodland, forages on bark",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Baltimore_Oriole",
+    "rating": 0,
+    "reason": "Open deciduous woodland and shade trees",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Hooded_Oriole",
+    "rating": 0,
+    "reason": "Palms, riparian trees and towns in arid regions",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Orchard_Oriole",
+    "rating": 0,
+    "reason": "Open woodland and orchards",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Scott_Oriole",
+    "rating": 0,
+    "reason": "Desert yucca and pinyon-juniper scrub",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Ovenbird",
+    "rating": 0,
+    "reason": "Forest floor of deciduous woodland",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Brown_Pelican",
+    "rating": 3,
+    "reason": "Plunge-dives for fish in coastal waters",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "White_Pelican",
+    "rating": 3,
+    "reason": "Swims and scoops fish on lakes and wetlands",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Western_Wood_Pewee",
+    "rating": 0,
+    "reason": "Open woodland flycatcher",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Sayornis",
+    "rating": 1,
+    "reason": "Phoebes usually near water, nest on streamside structures",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "American_Pipit",
+    "rating": 1,
+    "reason": "Tundra breeder; winters on shores, mudflats and fields",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Whip_poor_Will",
+    "rating": 0,
+    "reason": "Nightjar of dry deciduous forest",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Horned_Puffin",
+    "rating": 3,
+    "reason": "Diving seabird catching fish at sea",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Common_Raven",
+    "rating": 0,
+    "reason": "Mountains, deserts, forests, generalist",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "White_necked_Raven",
+    "rating": 0,
+    "reason": "African mountains and rocky open country",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "American_Redstart",
+    "rating": 0,
+    "reason": "Deciduous forest foliage gleaner",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Geococcyx",
+    "rating": 0,
+    "reason": "Roadrunners of desert and arid scrub",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Loggerhead_Shrike",
+    "rating": 0,
+    "reason": "Open grassland and scrub with perches",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Great_Grey_Shrike",
+    "rating": 0,
+    "reason": "Open country with scattered trees and scrub",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Baird_Sparrow",
+    "rating": 0,
+    "reason": "Native mixed-grass prairie",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Black_throated_Sparrow",
+    "rating": 0,
+    "reason": "Desert scrub",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Brewer_Sparrow",
+    "rating": 0,
+    "reason": "Sagebrush shrubland",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Chipping_Sparrow",
+    "rating": 0,
+    "reason": "Open woodland, lawns and parks",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Clay_colored_Sparrow",
+    "rating": 0,
+    "reason": "Shrubby prairie and brushy fields",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "House_Sparrow",
+    "rating": 0,
+    "reason": "Towns and farmland",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Field_Sparrow",
+    "rating": 0,
+    "reason": "Old fields and brushy grassland",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Fox_Sparrow",
+    "rating": 0,
+    "reason": "Dense thickets and forest undergrowth",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Grasshopper_Sparrow",
+    "rating": 0,
+    "reason": "Dry grasslands",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Harris_Sparrow",
+    "rating": 0,
+    "reason": "Taiga-tundra edge; winters in brushy fields",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Henslow_Sparrow",
+    "rating": 1,
+    "reason": "Tall, often damp grassy meadows",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Le_Conte_Sparrow",
+    "rating": 2,
+    "reason": "Wet sedge meadow and marsh-edge specialist feeding on ground",
+    "source": "adjudicated",
+    "n_agree": 0
+   },
+   {
+    "species": "Lincoln_Sparrow",
+    "rating": 1,
+    "reason": "Wet shrubby bogs and willow thickets",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Nelson_Sharp_tailed_Sparrow",
+    "rating": 2,
+    "reason": "Salt and freshwater marshes, feeds in marsh vegetation",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Savannah_Sparrow",
+    "rating": 0,
+    "reason": "Open grasslands and fields, some salt-marsh forms",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Seaside_Sparrow",
+    "rating": 2,
+    "reason": "Salt marsh specialist foraging on mud and in grasses",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Song_Sparrow",
+    "rating": 1,
+    "reason": "Often in wet thickets and marsh edges",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Tree_Sparrow",
+    "rating": 0,
+    "reason": "Tundra scrub; winters in weedy fields",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Vesper_Sparrow",
+    "rating": 0,
+    "reason": "Dry open fields and grasslands",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "White_crowned_Sparrow",
+    "rating": 0,
+    "reason": "Shrubby open habitats",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "White_throated_Sparrow",
+    "rating": 0,
+    "reason": "Forest undergrowth and thickets",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Cape_Glossy_Starling",
+    "rating": 0,
+    "reason": "African savanna and open woodland",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Bank_Swallow",
+    "rating": 2,
+    "reason": "Nests in riverbanks, forages aerially over water",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Barn_Swallow",
+    "rating": 1,
+    "reason": "Open country, frequently hawks insects over water",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Cliff_Swallow",
+    "rating": 1,
+    "reason": "Open areas near water, needs mud for nests",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Tree_Swallow",
+    "rating": 2,
+    "reason": "Nests near wetlands and ponds, forages aerially over water",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Scarlet_Tanager",
+    "rating": 0,
+    "reason": "Deciduous forest canopy",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Summer_Tanager",
+    "rating": 0,
+    "reason": "Open woodland, eats bees and wasps",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Artic_Tern",
+    "rating": 3,
+    "reason": "Plunge-diving seabird, mostly at sea",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Black_Tern",
+    "rating": 3,
+    "reason": "Marsh tern dipping prey from the water surface",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Caspian_Tern",
+    "rating": 3,
+    "reason": "Plunge-dives for fish",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Common_Tern",
+    "rating": 3,
+    "reason": "Plunge-dives for small fish",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Elegant_Tern",
+    "rating": 3,
+    "reason": "Coastal tern plunge-diving for fish",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Forsters_Tern",
+    "rating": 3,
+    "reason": "Marsh tern plunge-diving for fish",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Least_Tern",
+    "rating": 3,
+    "reason": "Plunge-dives for small fish near shores",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Green_tailed_Towhee",
+    "rating": 0,
+    "reason": "Montane shrubland and sagebrush",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Brown_Thrasher",
+    "rating": 0,
+    "reason": "Thickets and brushy edges",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Sage_Thrasher",
+    "rating": 0,
+    "reason": "Sagebrush steppe",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Black_capped_Vireo",
+    "rating": 0,
+    "reason": "Shrubby oak scrub",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Blue_headed_Vireo",
+    "rating": 0,
+    "reason": "Mixed and coniferous forests",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Philadelphia_Vireo",
+    "rating": 0,
+    "reason": "Deciduous second-growth forest",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Red_eyed_Vireo",
+    "rating": 0,
+    "reason": "Deciduous forest canopy",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Warbling_Vireo",
+    "rating": 1,
+    "reason": "Deciduous trees, often riparian along streams",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "White_eyed_Vireo",
+    "rating": 0,
+    "reason": "Dense shrubby thickets",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Yellow_throated_Vireo",
+    "rating": 0,
+    "reason": "Open deciduous woodland",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Bay_breasted_Warbler",
+    "rating": 0,
+    "reason": "Boreal spruce forest",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Black_and_white_Warbler",
+    "rating": 0,
+    "reason": "Forests, creeps along bark",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Black_throated_Blue_Warbler",
+    "rating": 0,
+    "reason": "Deciduous forest understory",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Blue_winged_Warbler",
+    "rating": 0,
+    "reason": "Shrubby old fields and forest edges",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Canada_Warbler",
+    "rating": 1,
+    "reason": "Moist forests with dense, often swampy understory",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Cape_May_Warbler",
+    "rating": 0,
+    "reason": "Boreal spruce forest",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Cerulean_Warbler",
+    "rating": 0,
+    "reason": "Mature deciduous forest canopy",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Chestnut_sided_Warbler",
+    "rating": 0,
+    "reason": "Second-growth shrubby forest",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Golden_winged_Warbler",
+    "rating": 0,
+    "reason": "Shrubby early-successional habitat",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Hooded_Warbler",
+    "rating": 0,
+    "reason": "Deciduous forest understory",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Kentucky_Warbler",
+    "rating": 0,
+    "reason": "Moist deciduous forest floor",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Magnolia_Warbler",
+    "rating": 0,
+    "reason": "Young coniferous forest",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Mourning_Warbler",
+    "rating": 0,
+    "reason": "Dense second-growth thickets",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Myrtle_Warbler",
+    "rating": 0,
+    "reason": "Coniferous forest; winters in varied habitats",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Nashville_Warbler",
+    "rating": 0,
+    "reason": "Second-growth woodland and forest edges",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Orange_crowned_Warbler",
+    "rating": 0,
+    "reason": "Shrubby woodland and thickets",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Palm_Warbler",
+    "rating": 1,
+    "reason": "Breeds in boreal bogs; winters in open areas",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Pine_Warbler",
+    "rating": 0,
+    "reason": "Pine forests",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Prairie_Warbler",
+    "rating": 0,
+    "reason": "Scrubby fields and young pine stands",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Prothonotary_Warbler",
+    "rating": 2,
+    "reason": "Swamps and flooded forests, gleans insects in vegetation",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Swainson_Warbler",
+    "rating": 1,
+    "reason": "Swampy canebrakes and damp thickets",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Tennessee_Warbler",
+    "rating": 0,
+    "reason": "Boreal forest",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Wilson_Warbler",
+    "rating": 1,
+    "reason": "Wet willow thickets and streamside shrubs",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Worm_eating_Warbler",
+    "rating": 0,
+    "reason": "Deciduous forest hillsides",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Yellow_Warbler",
+    "rating": 1,
+    "reason": "Shrubs and willows often near water",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Northern_Waterthrush",
+    "rating": 2,
+    "reason": "Swamps and bogs, forages at water's edge on wet ground",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Louisiana_Waterthrush",
+    "rating": 3,
+    "reason": "Wades forest streams taking aquatic invertebrates from water and rocks",
+    "source": "adjudicated",
+    "n_agree": 0
+   },
+   {
+    "species": "Bohemian_Waxwing",
+    "rating": 0,
+    "reason": "Boreal forest, fruit eater",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Cedar_Waxwing",
+    "rating": 1,
+    "reason": "Fruit eater that often flycatches emerging insects over streams",
+    "source": "adjudicated",
+    "n_agree": 0
+   },
+   {
+    "species": "American_Three_toed_Woodpecker",
+    "rating": 0,
+    "reason": "Boreal coniferous forest",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Pileated_Woodpecker",
+    "rating": 0,
+    "reason": "Mature forests",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Red_bellied_Woodpecker",
+    "rating": 0,
+    "reason": "Deciduous woodlands",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Red_cockaded_Woodpecker",
+    "rating": 0,
+    "reason": "Mature longleaf pine forest",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Red_headed_Woodpecker",
+    "rating": 0,
+    "reason": "Open woodland and savanna",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Downy_Woodpecker",
+    "rating": 0,
+    "reason": "Woodlands, parks and yards",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Bewick_Wren",
+    "rating": 0,
+    "reason": "Brushy scrub and open woodland",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Cactus_Wren",
+    "rating": 0,
+    "reason": "Desert cactus scrub",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Carolina_Wren",
+    "rating": 0,
+    "reason": "Woodland undergrowth and gardens",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "House_Wren",
+    "rating": 0,
+    "reason": "Open woodland, edges and yards",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Marsh_Wren",
+    "rating": 2,
+    "reason": "Lives in cattail and reed marshes, gleans insects",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Rock_Wren",
+    "rating": 0,
+    "reason": "Arid rocky slopes",
+    "source": "consensus",
+    "n_agree": 4
+   },
+   {
+    "species": "Winter_Wren",
+    "rating": 1,
+    "reason": "Moist forest understory, often near streams",
+    "source": "consensus",
+    "n_agree": 3
+   },
+   {
+    "species": "Common_Yellowthroat",
+    "rating": 2,
+    "reason": "Mostly marshes and wet thickets, gleans insects in vegetation",
+    "source": "consensus",
+    "n_agree": 4
+   }
+  ],
+  "disputed": [
+   "Gray_Catbird",
+   "Yellow_breasted_Chat",
+   "Olive_sided_Flycatcher",
+   "Nighthawk",
+   "Le_Conte_Sparrow",
+   "Louisiana_Waterthrush",
+   "Cedar_Waxwing"
+  ],
+  "adjudicated": [
+   {
+    "species": "Gray_Catbird",
+    "rating": 1,
+    "reason": "Dense thickets, frequently moist streamside tangles; not water-dependent",
+    "confidence": "low"
+   },
+   {
+    "species": "Yellow_breasted_Chat",
+    "rating": 1,
+    "reason": "Shrubby thickets, largely riparian in West; feeds in vegetation",
+    "confidence": "medium"
+   },
+   {
+    "species": "Olive_sided_Flycatcher",
+    "rating": 1,
+    "reason": "Conifer edges, often at bogs and beaver ponds; not water-dependent",
+    "confidence": "medium"
+   },
+   {
+    "species": "Nighthawk",
+    "rating": 1,
+    "reason": "Open-country aerial insectivore that regularly hawks insects over water",
+    "confidence": "medium"
+   },
+   {
+    "species": "Le_Conte_Sparrow",
+    "rating": 2,
+    "reason": "Wet sedge meadow and marsh-edge specialist feeding on ground",
+    "confidence": "medium"
+   },
+   {
+    "species": "Louisiana_Waterthrush",
+    "rating": 3,
+    "reason": "Wades forest streams taking aquatic invertebrates from water and rocks",
+    "confidence": "medium"
+   },
+   {
+    "species": "Cedar_Waxwing",
+    "rating": 1,
+    "reason": "Fruit eater that often flycatches emerging insects over streams",
+    "confidence": "low"
+   }
+  ],
+  "flags": [
+   {
+    "species": "Northern_Waterthrush",
+    "current": 2,
+    "suggested": 3,
+    "why": "It forages like its congener Louisiana Waterthrush (rated 3), wading shallow swamp and bog edges for aquatic invertebrates."
+   }
+  ]
+ }
+}

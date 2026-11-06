@@ -1,0 +1,25 @@
+# AI-aided pair, Phase I. Python 3.12.
+# Install PyTorch FIRST from the CUDA 12.6 index (see readme.md):
+#   pip install torch==2.14.1 torchvision==0.29.1 --index-url https://download.pytorch.org/whl/cu126
+# then:
+#   pip install -r requirements.txt
+transformers==5.22.2
+datasets==5.1.0
+huggingface_hub==2.4.0
+numpy==2.5.4
+pandas==3.1.1
+pyarrow==26.0.1
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+pillow==13.0.0
+umap-learn==0.5.12
+opencv-python-headless==5.0.0.93
+rembg==2.0.87
+onnxruntime==1.31.1
+altair==6.3.0
+vl-convert-python==1.9.0.post1
+ipykernel==7.4.0
+ipywidgets==8.1.9
+jupyter==1.1.1
+nbconvert==7.17.2
